@@ -1,0 +1,74 @@
+.forgot_wrapper {
+    width: 100%;
+    max-width: 682px;
+    height: 416px;
+    border: 1px solid #898181;
+    background: linear-gradient(#0B0C0F, #000000, #3d3b3b);
+    padding: 50px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+    border-radius: 8px !important;
+}
+
+.forgot_input {
+    padding: 25px;
+    width: 100%;
+    border-radius: 8px;
+    background: #151313;
+    border-bottom: 1px solid var(--light_orange);
+    color: #e6e3e3 !important;
+
+
+}
+
+.forgot_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forgot_inner_div {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+h1 {
+    margin: 0 !important;
+    font-family: var(--font_family);
+    font-weight: 700;
+    font-size: 30px;
+    max-width: 268px;
+}
+
+.forgot_span {
+    max-width: 326px;
+    font-family: var(--font_family);
+    font-size: 16px;
+    color: #818181;
+}
+
+/* <<<<<<<<<<<<<<<<<<<<-----------------Resposive css in -------------------->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+@media(max-width:768px) {
+    .forgot_wrapper {
+        width: 500px !important;
+    }
+}
+
+@media(max-width:425px) {
+    .forgot_wrapper {
+        width: 275px !important;
+    }
+
+    .login_button {
+        font-size: 12px !important;
+    }
+}
+
+@media(max-width:375px) {
+    .forgot_wrapper {
+        width: 200px !important;
+    }
+}

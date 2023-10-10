@@ -1,0 +1,146 @@
+.flickstar_details_container {
+    color: var(--white);
+    font-family: var(--font_family);
+}
+
+.carousel_span {
+    border-right: 1px solid white;
+    padding: 6px;
+    font-family: var(--font_family);
+    font-size: 14px !important;
+    font-weight: 400 !important;
+}
+
+.flickstar_details_div_img {
+    max-width: 1920px;
+    width: 100%;
+    z-index: 2 !important;
+}
+
+.flickstar_details_sec_first {
+    max-width: 527px !important;
+    width: 100% !important;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.custom_button .css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+    max-width: 217px !important;
+    width: 100% !important;
+    background: var(--gradient);
+    color: white !important;
+    text-transform: capitalize !important;
+    display: flex;
+    gap: 10px;
+}
+
+.flickstar_details_h1 {
+    font-size: 56px !important;
+    font-family: var(--font_family);
+    font-weight: 700 !important;
+}
+
+.flickstar_details_span_main {
+    display: flex;
+    gap: 19px !important;
+}
+
+.carousel_span {
+    font-size: 16px !important;
+    font-weight: 400 !important;
+}
+
+.carousel_span1 {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+}
+.menulist_wrapper{
+    font-family: var(--font_family);
+    font-size: 24px;
+    font-weight: 600;
+}
+.view_rel_detail{
+    color:#FFFFFFB2;
+}
+.large_width .react-multi-carousel-item {
+    width: 389px !important;
+    border: 2px solid transparent;
+    border-radius: 8px !important;
+}
+
+.react-multi-carousel-item:hover {
+    border: 2px solid white !important;
+}
+
+.large_height {
+    height: 249px !important;
+}
+
+.menu_div_heading {
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.view_carousel_span {
+    border-bottom: 1px solid #F4530B;
+    
+}
+
+.view_details_sec_first{
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font_family);
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+}
+.view_div_heading{
+    display: flex;
+    gap: 15px;
+    cursor: pointer;
+}
+.view_container{
+    background: #151618;
+    border-radius: 8px;
+    padding: 50px;
+}
+.view_details_sec{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.c-w {
+    color: var(--white);
+    font-size: 24px !important;
+    font-family: var(--font_family);
+    font-weight: 600;
+}
+
+.c-d {
+    color: #FFFFFFB2;
+    font-size: 22px !important;
+    font-family: var(--font_family);
+    font-weight: 400;
+
+}
+.border_bottom_view{
+    border: 1px solid #FFFFFF33
+}
+.view_span_flex{
+    display: flex;
+    gap: 5px;
+    text-align: center;
+}
+.css-1ujsas3{
+    color: white;
+    text-transform: capitalize;
+    display: flex;
+    gap: 5px;
+    border-radius: 8px;
+    background: var(--gradient);
+}

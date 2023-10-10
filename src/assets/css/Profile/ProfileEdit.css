@@ -1,0 +1,43 @@
+.profile_model_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 50px;
+    background-color: #0b0c0f;
+    color: white;
+    width: 100%;
+    height: 800px;
+}
+
+.profile_div_main {
+    display: flex;
+    gap: 30px;
+}
+
+.profile_input {
+    border: 1px solid white;
+    background: rgb(117, 116, 116) !important;
+    padding: 10px;
+    height: 20px;
+}
+
+.profile_button_save {
+    text-transform: capitalize;
+}
+
+.profile_button_save {
+    border: 1px solid wheat !important;
+    border-radius: 8px !important;
+    color: white !important;
+    text-transform: capitalize !important;
+    padding: 10px 20px;
+    background: var(--gradient);
+
+}
+
+.profile_second_div {
+    display: flex;
+    gap: 40px;
+}

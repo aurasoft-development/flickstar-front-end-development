@@ -1,0 +1,218 @@
+.header_nav_main {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(27, 27, 27);
+    font-family: var(--font_family);
+}
+
+/* .css-ag4pi6-MuiPaper-root-MuiAppBar-root {
+    width: 100% !important;
+} */
+
+.header_nav_item {
+    display: flex !important;
+    align-items: center !important;
+    /* gap: 8px !important; */
+}
+
+.header_login_div {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+.header_lives_main {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.header_nav_language {
+    display: flex !important;
+
+}
+
+.lives_p {
+    font-size: 12px;
+    color: red !important;
+    font-weight: 400;
+    margin-right: 10px !important;
+}
+
+.nav_list,
+li {
+    list-style: none !important;
+    width: 95px;
+    text-align: center;
+}
+
+.css-1hawdz8 .simplebar-content {
+    background: rgb(15, 15, 15) !important;
+    color: white !important;
+}
+
+.css-dxfs78 {
+    background-color: rgb(15, 15, 15) !important;
+    color: white !important;
+}
+
+.css-164319m-MuiPaper-root-MuiPopover-paper {
+    width: 200px !important;
+    /* left: 350px !important; */
+    background-color: rgb(32, 31, 31) !important;
+    color: rgb(180, 174, 174) !important;
+    font-size: var(--font_family);
+
+}
+
+.css-1d7mjhn {
+    background-color: rgb(15, 15, 15) !important;
+    color: white !important;
+}
+
+.css-ag4pi6-MuiPaper-root-MuiAppBar-root {
+    width: 100% !important;
+    background: transparent !important;
+}
+
+.header_nav_language {
+    border: 1px solid white;
+    display: flex;
+    padding: 8px;
+    border-radius: 8px;
+    width: 120px;
+    gap: 8px;
+}
+
+.css-p5ttyf {
+    width: 100% !important;
+}
+
+input,
+select {
+    -webkit-text-fill-color: #ffffff !important
+}
+
+.MuiInputBase-input {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+}
+
+.css-1g12qau-MuiSvgIcon-root-MuiNativeSelect-icon {
+    color: #ffffff !important;
+}
+
+.css-1tfylnl-MuiToolbar-root {
+    padding: 0 !important;
+}
+
+.header-1200 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap !important;
+    min-height: 92px;
+    align-items: center;
+    background-color: rgb(27, 27, 27);
+
+}
+
+.header_nav_sec {
+    display: flex;
+    gap: 10px;
+}
+
+.header_nav_sub {
+    border: 1px solid rgb(71, 69, 69);
+    padding: 8px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.searchInput {
+    max-width: 1620px;
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input_search {
+    display: flex;
+    gap: 20px;
+}
+
+/* .input_search, */
+.input,
+select {
+    color: #FFFFFF33 !important;
+    /* width: 100% !important; */
+}
+
+/* Input{
+    width: 100%;
+} */
+
+.css-p5ttyf {
+    background-color: transparent !important;
+}
+
+.css-1vkzcig {
+    border: 1px solid white !important;
+    color: white !important;
+}
+
+.css-1kwi5j1-MuiButtonBase-root-MuiButton-root {
+    color: white !important;
+    font-weight: 400;
+    border: 1px solid !important;
+}
+
+.css-19ygod6-MuiNativeSelect-select-MuiInputBase-input-MuiInput-input {
+    font-family: var(--font_family) !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    color: #ffffff !important;
+    background: transparent !important;
+}
+
+@media (max-width: 1200px) {
+    .header_nav_main {
+        display: none !important;
+    }
+}
+
+@media(min-width:1200px) {
+    .header-1200 {
+        display: none !important;
+    }
+}
+
+@media(max-width:550px) {
+    .header-1200 {
+        padding: 0%;
+    }
+}
+
+@media(max-width:320px) {
+    .header-1200 {
+        padding: 0%;
+    }
+
+    .header_nav_language {
+        align-items: center;
+        width: 120px;
+        padding: 6px;
+        gap: 6px;
+    }
+
+    .css-i4bv87-MuiSvgIcon-root {
+        font-size: medium !important;
+        color: white !important;
+    }
+
+    .css-1gac5d9-MuiButtonBase-root-MuiIconButton-root {
+        padding: 0% !important;
+    }
+}

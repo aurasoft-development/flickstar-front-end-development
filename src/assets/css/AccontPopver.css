@@ -1,0 +1,13 @@
+.account_p_div_main {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.account_p_logout {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}

@@ -1,0 +1,241 @@
+body {
+    margin: 0% !important;
+}
+
+input:focus {
+    outline: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+Input {
+    border: none !important;
+    outline: none !important;
+}
+
+.wrapper {
+    border: 1px solid #818181;
+    color: var(--red) !important;
+    padding: 54px;
+    border-radius: 8px;
+    background-color: var(--black) !important;
+    width: 100% !important;
+    max-width: 682px;
+    height: 665px;
+    position: relative;
+    top: 10% !important;
+    margin: auto;
+}
+
+.skipBtn {
+    position: absolute;
+    top: 24px;
+    right: 56px;
+    color: #fff;
+    font-family: var(--font_family);
+}
+
+.css-1oqqzyl-MuiContainer-root {
+    height: 996px !important;
+}
+
+.div_section_main {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    width: 100% !important;
+    height: 622px !important;
+
+
+    /* padding: 15px; */
+}
+
+.login_heading {
+    margin-bottom: 0;
+    font-size: 25px;
+    font-weight: 700;
+    color: #FFFFFF;
+    font-family: var(--font_family);
+}
+
+.login_plan_text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #818181;
+    font-family: var(--font_family);
+}
+
+.form_div_main {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 98px !important;
+}
+
+.login_form_sec {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 98px !important;
+}
+
+.form_input {
+    padding: 25px;
+    border-radius: 8px;
+    background: #151313;
+    border-bottom: 1px solid var(--light_orange);
+}
+
+.cs2 {
+    color: var(--light_orange);
+    font-size: 12px;
+    visibility: hidden;
+    height: 20px;
+}
+
+.errorMessageTrue {
+    color: var(--light_orange);
+    font-size: 12px;
+    visibility: visible;
+    height: 20px;
+}
+
+.login_button {
+    height: 72px;
+    border-radius: 8px !important;
+    background: var(--gradient) !important;
+    font-size: 20px !important;
+    font-weight: 600 !important
+}
+
+.social_text {
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    color: #FFFFFF !important;
+    font-family: var(--font_family);
+}
+
+.social_media {
+    display: flex;
+    justify-content: space-between;
+    height: 72px;
+    gap: 20px
+}
+
+.login_forget {
+    position: absolute;
+    right: 7%;
+    font-family: var(--font_family);
+    font-size: 12px;
+    font-weight: 400;
+    color: white;
+    cursor: pointer;
+
+}
+
+.social_media_login {
+    display: flex;
+    align-items: center;
+    border: 1px solid #818181;
+    border-radius: 8px;
+    width: 100%;
+    gap: 10px;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFFFFF;
+    height: var(--height-72) !important;
+    font-family: var(--font_family);
+}
+
+.page_redirect {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    color: #ffffff;
+    font-family: var(--font_family);
+}
+
+.fonts {
+    font-family: var(--font_family);
+}
+
+.MuiInputBase-input {
+    padding: 0 !important;
+    color: #818181 !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+
+}
+
+.css-v4u5dn-MuiInputBase-root-MuiInput-root:after {
+    border-bottom: none !important;
+}
+
+.css-q0jhri-MuiInputBase-root-MuiInput-root:after {
+    border-bottom: none !important;
+}
+
+.login_form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        width: 70% !important;
+        /* top: 600px; */
+
+    }
+}
+
+@media(max-width:425px) {
+    .login_forget {
+        right: 14%;
+        margin-top: 15px;
+    }
+
+    h2 {
+        text-align: left;
+        margin: 0;
+    }
+
+    .social_text {
+        font-size: 15px !important;
+    }
+
+    .social_media {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .div_section_main {
+        gap: 5px !important;
+    }
+
+    .form_input {
+        padding: 15px !important;
+    }
+
+    .login_form {
+        gap: 5px !important;
+    }
+
+    .login_button {
+        height: 55px !important;
+    }
+
+    .page_redirect {
+        position: absolute;
+        bottom: 10px;
+    }
+    .wrapper {
+        height: 535px !important;
+        width: 190px !important;
+    }
+}

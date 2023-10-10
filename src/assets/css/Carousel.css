@@ -1,0 +1,153 @@
+.flickstar_container {
+    width: 100% !important;
+    max-width: 1920px !important;
+    background: #0B0C0F;
+
+}
+
+.box_main {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center !important;
+    background: var(--background_c);
+    max-width: 1920px !important;
+    width: 100% !important;
+}
+
+.carousel_img {
+    align-items: center;
+    color: var(--white);
+    
+}
+
+.carousel_div_main {
+    max-width: 527px !important;
+    width: 100% !important;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.carousel_div_img {
+    max-width: 1920px;
+    width: 100%;
+    opacity: 0.7 !important;
+}
+
+.carousel_span_main {
+    display: flex;
+    gap: 19px;
+    width: 326px;
+}
+
+.carousel_span {
+    border-right: 1px solid white;
+    padding: 6px;
+    font-family: var(--font_family);
+    font-size: 14px !important;
+    font-weight: 400 !important;
+}
+
+.back_color {
+    background-color: #E8510E;
+    width: 26px;
+    height: 24px;
+    border-radius: 10px !important;
+}
+
+.carousel_span1 {
+    width: 100%;
+    max-width: 517px !important;
+    font-family: var(--font_family);
+    font-size: 14px !important;
+    font-weight: 400 !important;
+}
+
+.b_left {
+    border-left: 1px solid white;
+}
+
+.carousel_div_botton {
+    display: flex;
+    gap: 16px;
+}
+
+.carousel_grater {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: right;
+    padding-bottom: 20px !important;
+}
+
+.custom_button_1 .css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+    max-width: 120px !important;
+    width: 100% !important;
+    height: 55px !important;
+    background: var(--gradient);
+    color: var(--white) !important;
+    text-transform: capitalize !important;
+    display: flex !important;
+    gap: 8px !important;
+}
+
+.carousel_icon_image {
+    width: 55px !important;
+    height: 55px !important;
+    background: #424242AD;
+    border-radius: 8px !important;
+    display: flex;
+    justify-content: center;
+    -webkit-align-items: center !important;
+
+}
+@media (max-width: 868px) {
+    .carousel_img {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .carousel_div_main {
+        width: 100%;
+        padding-left: 0%;
+    }
+}
+
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+    font-size: 45px !important;
+    color: rgb(196, 188, 188) !important;
+}
+.owl-carousel .owl-nav button.owl-prev{
+    padding: 0px 20px !important;
+}
+
+
+.owl-theme .owl-nav {
+    display: flex !important;
+    justify-content: flex-end !important; 
+    gap: 60px !important;
+    padding-right: 100px !important;
+}
+
+.owl-theme .owl-dots .owl-dot span{
+    width: 10px !important ;
+    height: 3px !important;
+    margin: 5px 7px !important;
+    background: #c1bbb5 !important;
+    position: relative !important;
+    bottom: 25px !important;
+    border-radius: 1px !important;
+}
+.wel_img img{
+    width: 229px !important;
+}
+.carousel_button img{
+    width: 21px !important;
+}
+.carousel_icon_image img{
+    width: 24px !important;
+}

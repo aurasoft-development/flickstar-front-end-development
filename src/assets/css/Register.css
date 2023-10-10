@@ -1,0 +1,44 @@
+.div_section_main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.cs2 {
+    color: var(--light_orange);
+    font-size: 12px;
+    visibility: hidden;
+    height: 30px;
+    font-family: var(--font_family);
+}
+
+.errorMessageTrue {
+    color: var(--light_orange);
+    font-size: 12px;
+    visibility: visible;
+    height: 30px;
+    font-family: var(--font_family);
+}
+
+/* <<<<<<<<<<<<<<<<<<<-----------------------------Responsive css -------------------->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media(max-width:768px) {
+    .reset_wrapper {
+        width: 500px !important;
+    }
+}
+@media(max-width:425px) {
+    .reset_wrapper {
+        width: 300px !important;
+    }
+}
+@media(max-width:375px) {
+    .reset_wrapper {
+        width: 200px !important;
+    }
+}
+/* @media(max-width:425px) {
+    .reset_wrapper {
+        width: 300px !important;
+    }
+} */

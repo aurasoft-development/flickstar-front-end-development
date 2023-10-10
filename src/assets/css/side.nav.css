@@ -1,0 +1,22 @@
+.side_nav_main {}
+
+.side_nav_ul li {
+    text-align: start;
+}
+
+.side_nav_ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lives_div {
+    display: flex;
+    align-items: center;
+}
+
+.side_nav_icon {
+    display: flex;
+    margin-top: 10px;
+    gap: 25px;
+}

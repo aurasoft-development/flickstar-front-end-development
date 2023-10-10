@@ -1,0 +1,92 @@
+.flickstar_container {
+    background: #000000 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.menulist_container {
+    color: var(--white);
+    font-family: var(--font_family);
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+.menulist_wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.font-18 {
+    font-size: 18px !important;
+}
+
+.menu_color {
+    color: #F4530B !important;
+}
+
+.menu_div_heading {
+    text-align: center;
+    display: flex;
+}
+
+.series_card_div {
+    width: 209px !important;
+    height: 249px !important;
+    border-radius: 8px !important;
+    border: 2px solid transparent !important;
+}
+
+.small_width .react-multi-carousel-item {
+    width: 253px !important;
+    border: 2px solid transparent;
+    border-radius: 8px !important;
+}
+
+.small_height {
+    height: 249px !important;
+}
+
+.large_width .react-multi-carousel-item {
+    width: 389px !important;
+    border: 2px solid transparent;
+    border-radius: 8px !important;
+}
+
+.large_height {
+    height: 249px !important;
+}
+
+.medium_width .react-multi-carousel-item {
+    width: 253px !important;
+    border: 2px solid transparent !important;
+    border-radius: 8px !important;
+}
+
+.medium_height {
+    height: 377px !important;
+}
+
+.react-multi-carousel-item:hover {
+    border: 2px solid white !important;
+}
+
+.image-item {
+    margin: 5px !important;
+}
+
+.card::after {
+    background: linear-gradient(to right, rgb(12, 12, 12)10%, rgba(17, 17, 17, 0)100%);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 35%;
+    z-index: 2;
+}
+
+.card::after {
+    right: 0%;
+    top: 0%;
+    transform: rotateZ(180deg)
+}

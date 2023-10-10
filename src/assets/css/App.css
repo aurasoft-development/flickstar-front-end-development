@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /* color  */
+    --white: #ffffff !important;
+    --black: #090b0d !important;
+    --red: #ff0000;
+    --light_orange: #F4530B;
+    --gradient: linear-gradient(#E8510E, #59220A) !important;
+    --login_background: linear-gradient(#19191a, #1d1c1c, #0c0b0b);
+    --font_family: 'Poppins', sans-serif !important;
+    --height-72: 72px !important;
+    --background_c: linear-gradient(180deg, rgb(0, 0, 0) 25%, rgb(41, 40, 38) 70%, rgb(0, 0, 0) 85%);
+    /* border css */
+
+
+    /* Font Family  */
+
+}
+
+input,
+select {
+    color: #818181 !important;
+    -webkit-text-fill-color: #818181 !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+}
+
+.main {
+    background-image: linear-gradient(360deg, rgb(0, 0, 0), rgb(34, 33, 33), rgba(0, 0, 0, 0.78)), url('../images/Maskgroup.png');
+}
+
+.cursor_pointer {
+    cursor: pointer;
+    /* display: flex;
+    flex-direction: column;
+    gap: 15px; */
+}
+
+.p-l {
+    padding-left: 100px
+}
+
+.pt-120 {
+    padding-top: 120px !important;
+}
+
+.p-r {
+    padding-right: 100px
+}
+
+.h2 {
+    margin: 0 !important;
+}
+
+.w-40 {
+    width: 40% !important;
+}
+
+.w-60 {
+    width: 100% !important;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+.w-50 {
+    width: 50% !important;
+}
+
+.vw-100 {
+    width: 100vw !important;
+}
+
+.-d {
+    display: flex !important;
+    gap: 5px;
+}
+
+.g-16 {
+    gap: 16px !important;
+}
+
+.d-f-d {
+    display: flex;
+    flex-direction: column;
+}
+
+.--background {
+    background: var(--black);
+}
+
+/* video player css test */
