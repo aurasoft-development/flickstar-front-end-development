@@ -1,6 +1,7 @@
 .flickstar_details_container {
     color: var(--white);
     font-family: var(--font_family);
+    position: relative;
 }
 
 .carousel_span {
@@ -58,14 +59,17 @@
     font-size: 14px !important;
     font-weight: 400 !important;
 }
-.menulist_wrapper{
+
+.menulist_wrapper {
     font-family: var(--font_family);
     font-size: 24px;
     font-weight: 600;
 }
-.view_rel_detail{
-    color:#FFFFFFB2;
+
+.view_rel_detail {
+    color: #FFFFFFB2;
 }
+
 .large_width .react-multi-carousel-item {
     width: 389px !important;
     border: 2px solid transparent;
@@ -88,10 +92,10 @@
 
 .view_carousel_span {
     border-bottom: 1px solid #F4530B;
-    
+
 }
 
-.view_details_sec_first{
+.view_details_sec_first {
     display: flex;
     justify-content: space-between;
     font-family: var(--font_family);
@@ -99,21 +103,25 @@
     font-weight: 600;
     color: white;
 }
-.view_div_heading{
+
+.view_div_heading {
     display: flex;
     gap: 15px;
     cursor: pointer;
 }
-.view_container{
+
+.view_container {
     background: #151618;
     border-radius: 8px;
     padding: 50px;
 }
-.view_details_sec{
+
+.view_details_sec {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
+
 .c-w {
     color: var(--white);
     font-size: 24px !important;
@@ -128,19 +136,96 @@
     font-weight: 400;
 
 }
-.border_bottom_view{
+
+.border_bottom_view {
     border: 1px solid #FFFFFF33
 }
-.view_span_flex{
+
+.view_span_flex {
     display: flex;
     gap: 5px;
     text-align: center;
 }
-.css-1ujsas3{
+
+.css-1ujsas3 {
     color: white;
     text-transform: capitalize;
     display: flex;
     gap: 5px;
     border-radius: 8px;
     background: var(--gradient);
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<---------------Responsive css------------------>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media(max-width:768px) {
+    .flickstar_details_sec_first {
+        gap: 10px;
+    }
+
+    .flickstar_details_h1 {
+        font-size: 40px !important;
+    }
+
+}
+
+@media(max-width:425px) {
+    .flickstar_details_sec_first .carousel_div_botton {
+        margin: 0;
+    }
+
+    .flickstar_details_sec_first {
+        padding: 0 !important;
+        width: 80% !important;
+    }
+
+    .hello {
+        padding: 0px !important;
+    }
+
+    .custom_button .css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+        width: 175px !important;
+        gap: 5px !important;
+    }
+
+    .flickstar_details_span_main {
+        gap: 5px !important;
+    }
+
+    .flickstar_details_sec_first {
+        padding-top: 70px !important;
+        gap: 5px !important;
+    }
+
+    .flickstar_details_h1 {
+        font-size: 20px !important;
+    }
+
+    .view_details_sec_first {
+        font-size: 15px !important;
+        width: 93%;
+    }
+
+    .view_container {
+        padding: 10px;
+        /* width: 0%; */
+    }
+
+    .c-w {
+        font-size: 15px !important;
+    }
+
+    .c-d {
+        font-size: 12px !important;
+    }
+
+    .view_details_sec {
+        gap: 10px;
+    }
+}
+
+@media(max-width:320px){
+    .flickstar_details_sec_first .carousel_div_botton{
+        margin: 0 !important;
+    }
 }

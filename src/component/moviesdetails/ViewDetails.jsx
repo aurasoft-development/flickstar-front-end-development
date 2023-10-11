@@ -6,7 +6,7 @@ import { changeComponent } from '../../features/movies/movies.details'
 const ViewDetails = ({ heading }) => {
     const dispatch = useDispatch()
     return (
-        <div className='p-l p-r'>
+        <div className='hello p-l p-r'>
             <div className="view_details_sec_first">
                 <span>{heading}</span>
                 <div className="view_div_heading">

@@ -17,7 +17,7 @@
 .carousel_img {
     align-items: center;
     color: var(--white);
-    
+
 }
 
 .carousel_div_main {
@@ -104,6 +104,7 @@
     -webkit-align-items: center !important;
 
 }
+
 @media (max-width: 868px) {
     .carousel_img {
         display: flex;
@@ -121,20 +122,21 @@
     font-size: 45px !important;
     color: rgb(196, 188, 188) !important;
 }
-.owl-carousel .owl-nav button.owl-prev{
+
+/* .owl-carousel .owl-nav button.owl-prev {
     padding: 0px 20px !important;
-}
+} */
 
 
 .owl-theme .owl-nav {
     display: flex !important;
-    justify-content: flex-end !important; 
+    justify-content: flex-end !important;
     gap: 60px !important;
     padding-right: 100px !important;
 }
 
-.owl-theme .owl-dots .owl-dot span{
-    width: 10px !important ;
+.owl-theme .owl-dots .owl-dot span {
+    width: 10px !important;
     height: 3px !important;
     margin: 5px 7px !important;
     background: #c1bbb5 !important;
@@ -142,12 +144,139 @@
     bottom: 25px !important;
     border-radius: 1px !important;
 }
-.wel_img img{
+
+.wel_img img {
     width: 229px !important;
 }
-.carousel_button img{
+
+.carousel_button img {
     width: 21px !important;
 }
-.carousel_icon_image img{
+
+.carousel_icon_image img {
     width: 24px !important;
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<-------------------Responsive css------------------>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media(max-width:768px) {
+    .menulist_container {
+        padding-left: 10px !important;
+    }
+}
+
+@media(max-width:425px) {
+
+    .owl-carousel .owl-nav button.owl-next,
+    .owl-carousel .owl-nav button.owl-prev {
+        display: none !important;
+    }
+
+    .carousel_span1 {
+        display: none !important;
+    }
+
+    .carousel_logo img {
+        height: 100px !important;
+        width: 150px !important;
+        position: relative !important;
+        top: 130px !important;
+    }
+
+    .carousel_span_main {
+        /* width: 150px; */
+        margin-left: 150px;
+        gap: 0;
+    }
+
+    .carousel_span {
+        font-size: 10px !important;
+    }
+
+    .carousel_div_botton {
+        margin-left: 150px;
+    }
+
+    .carousel_img {
+        padding-top: 100px !important;
+    }
+
+    .custom_button_1 .css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+        max-width: 100px !important;
+        height: 40px !important;
+    }
+
+    .carousel_icon_image img {
+        width: 15px !important;
+        height: 15px !important;
+    }
+
+    .carousel_icon_image {
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    .small_width .react-multi-carousel-item {
+        width: 130px !important;
+    }
+
+    .small_height {
+        height: 160px !important;
+    }
+
+    .medium_width .react-multi-carousel-item {
+        width: 150px !important;
+    }
+
+    .medium_height {
+        height: 200px !important;
+    }
+
+    .large_width .react-multi-carousel-item {
+        width: 210px !important;
+    }
+
+    .large_height {
+        height: 130px !important;
+    }
+
+    .menulist_wrapper {
+        padding: 0;
+    }
+
+    .font-18 {
+        font-size: 12px !important;
+    }
+}
+
+@media(max-width:320px) {
+    .carousel_logo img {
+        height: 80px !important;
+        width: 100px !important;
+    }
+
+    .carousel_span_main {
+        /* width: 150px; */
+        margin-left: 100px !important;
+        gap: 0;
+    }
+
+    .carousel_div_botton {
+        margin-left: 100px !important;
+    }
+
+    .custom_button_1 .css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+        max-width: 80px !important;
+        height: 35px !important;
+    }
+
+    .carousel_icon_image img {
+        width: 12px !important;
+        height: 12px !important;
+    }
+
+    .carousel_icon_image {
+        width: 35px !important;
+        height: 35px !important;
+    }
 }

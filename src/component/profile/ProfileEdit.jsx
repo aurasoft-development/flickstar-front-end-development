@@ -14,7 +14,7 @@ const ProfileEdit = () => {
     <div className='profile_model_container'>
       <h1>Edit Profile</h1>
       <div className='profile_div_main'>
-        <div className='test'>
+        <div className='test edit'>
           <div className='icons'> <EditIcon fontSize='large' /> </div>
           <img src={data.img} width={148} height={148} className='profile_edit_img' />
         </div>
