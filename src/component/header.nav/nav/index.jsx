@@ -93,7 +93,7 @@ export default function Nav({ openNav, onCloseNav }) {
               <li onClick={() => navigate('/movies')}>{t('MOVIES')}</li>
               <li>{t('TV_SHOWS')}</li>
               <li>{t('WEB_SERIES')}</li>
-              <li>{t('KIDS')}</li>
+              <li onClick={() => navigate('/kids')}>{t('KIDS')}</li>
 
               <div className='sidenav_live_div cursor_pointer'>
                 <div className='lives_div'>

@@ -169,9 +169,19 @@
 
 }
 
-@media(max-width:425px) {
+@media(max-width:426px) {
     .flickstar_details_sec_first .carousel_div_botton {
         margin: 0;
+    }
+
+    .menulist_wrapper {
+        font-size: 10px !important;
+        padding-right: 10px !important;
+        padding-top: 30px !important;
+    }
+
+    .menulist_container {
+        padding-right: 0% !important;
     }
 
     .flickstar_details_sec_first {
@@ -224,8 +234,8 @@
     }
 }
 
-@media(max-width:320px){
-    .flickstar_details_sec_first .carousel_div_botton{
+@media(max-width:320px) {
+    .flickstar_details_sec_first .carousel_div_botton {
         margin: 0 !important;
     }
 }

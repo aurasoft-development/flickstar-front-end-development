@@ -42,32 +42,32 @@ const KidsListSlider = () => {
   return (
     <Box className="box_main ">
       <OwlCarousel className="owl-theme" {...options}>
-          {images.map((step, index) => (
-            <div className='carousel_img w-100 ' key={index}>
-              <div className='carousel_div_main p-l wel_img'>
-                <img src={logo_image} width={229} height={142} />
-                <div className='carousel_span_main'>
-                  <span className='carousel_span'>2023</span>
-                  <span className='carousel_span back_color'>12+</span>
-                  <span className='carousel_span b_left '>1 hour 15min</span>
-                  <span className='carousel_span'>Entertainment</span>
-                </div>
-                <div className='carousel_div_botton custom_button_1 '>
-                  <Button className='carousel_button'>
-                    <img src={play} width={21} height={18} />
-                    <span>watch</span>
-                  </Button>
-                  <div className='carousel_icon_image' ><img src={plus} width={24} height={23} /> </div>
-                  <div className='carousel_icon_image' ><img src={info} width={24} height={23} /> </div>
-                </div>
+        {images.map((step, index) => (
+          <div className='carousel_img w-100 ' key={index}>
+            <div className='carousel_div_main p-l wel_img '>
+              <div className='carousel_kids'>  <img src={logo_image} width={229} height={142} /></div>
+              <div className='carousel_span_main'>
+                <span className='carousel_span'>2023</span>
+                <span className='carousel_span back_color'>12+</span>
+                <span className='carousel_span b_left '>1 hour 15min</span>
+                <span className='carousel_span'>Entertainment</span>
               </div>
-              <div className='carousel_div_img' >
-                <img src={step.imgPath} width={'100%'} height={'100%'} />
+              <div className='carousel_div_botton custom_button_1 '>
+                <Button className='carousel_button'>
+                  <img src={play} width={21} height={18} />
+                  <span>watch</span>
+                </Button>
+                <div className='carousel_icon_image' ><img src={plus} width={24} height={23} /> </div>
+                <div className='carousel_icon_image' ><img src={info} width={24} height={23} /> </div>
               </div>
             </div>
-          ))}
+            <div className='carousel_div_img' >
+              <img src={step.imgPath} width={'100%'} height={'100%'} />
+            </div>
+          </div>
+        ))}
       </OwlCarousel>
-    
+
     </Box>
   );
 }

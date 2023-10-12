@@ -165,7 +165,7 @@
     }
 }
 
-@media(max-width:425px) {
+@media(max-width:426px) {
 
     .owl-carousel .owl-nav button.owl-next,
     .owl-carousel .owl-nav button.owl-prev {
@@ -198,7 +198,7 @@
     }
 
     .carousel_img {
-        padding-top: 100px !important;
+        padding-top: 70px !important;
     }
 
     .custom_button_1 .css-1e6y48t-MuiButtonBase-root-MuiButton-root {
@@ -247,6 +247,22 @@
     .font-18 {
         font-size: 12px !important;
     }
+
+    .carousel_kids img {
+        width: 100px !important;
+        height: 80px;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .carousel_span_main {
+        padding-top: 20px;
+    }
+
+    .owl-theme .owl-dots .owl-dot span {
+        bottom: 0 !important;
+    }
+
 }
 
 @media(max-width:320px) {
@@ -279,4 +295,9 @@
         width: 35px !important;
         height: 35px !important;
     }
+
+    .owl-theme .owl-dots .owl-dot span {
+        bottom: 0 !important;
+    }
+
 }
