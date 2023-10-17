@@ -6,7 +6,6 @@ const Profile = createSlice({
     reducers: {
         editProfile(state, action) {
             return action.payload;
-            // console.log("action----->",action.payload)
         }
     }
 })

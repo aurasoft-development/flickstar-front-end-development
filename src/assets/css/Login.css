@@ -234,8 +234,14 @@ Input {
         position: absolute;
         bottom: 10px;
     }
+
     .wrapper {
         height: 535px !important;
         width: 190px !important;
     }
+
+    .css-1oqqzyl-MuiContainer-root {
+        padding-left: 10px !important;
+    }
+
 }

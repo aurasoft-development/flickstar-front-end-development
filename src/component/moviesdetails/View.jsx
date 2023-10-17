@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../../assets/css/FlickstarDetails.css'
 import slider from '../../assets/images/flickstar_details_page/slider.png'
 import info from '../../assets/images/flickstar_details_page/info.png'
@@ -10,10 +10,13 @@ import { Button } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 import video from '../../assets/video/video_medium.mp4'
 import VideoPlayer from '../../component/videoplayer/VideoPlayer.jsx'
+import { useSelector } from 'react-redux'
+
 
 
 const View = () => {
     const [show, setShow] = useState(false);
+    const [val, setVal] = useState(3);
     // const audioTrack = [
     //     {
     //         lable: "video player testing",
@@ -25,6 +28,8 @@ const View = () => {
     //     }
     // ]
     const navigate = useNavigate()
+
+    const data = useSelector((state) => state.movies.slice(-1))
     return (
         <div>
             <div className='flickstar_details_container' >
@@ -40,7 +45,12 @@ const View = () => {
                     <div className='carousel_div_botton custom_button'>
                         <Button className='carousel_button'>
                             <img src={play} width={21} height={18} />
-                            <span onClick={() => setShow(true)}>Continue Watching</span>
+                            <div className='countinue_range'>
+                                <span onClick={() => setShow(true)}>Continue Watching</span>
+                                <input type='range' min={0} max={1} step="any"
+                                    value={data[0] > 0 ? data[0] : 0}
+                                />
+                            </div>
                         </Button>
                         <div className='carousel_icon_image' ><img src={plus} width={24} height={23} /> </div>
                         <div className='carousel_icon_image' ><img src={info_1} width={24} height={23} /> </div>

@@ -24,6 +24,10 @@
         /* transition: opacity 400ms; */
     }
 
+    .css-i4bv87-MuiSvgIcon-root {
+        color: white;
+    }
+
     .videoPlayers {
         max-width: 1920px;
         width: 80%;
@@ -95,18 +99,18 @@
     visibility: hidden;
 }
 
-.input_vertical {
+/* .input_vertical {
     position: relative;
-}
+} */
 
 .input_vertical,
 input[type=range][orient=vertical] {
     appearance: slider-vertical;
     width: 8px;
-    height: 150px;
+    height: 125px;
     padding: 0 5px;
     position: absolute;
-    top: 100%;
+    top: 25%;
     z-index: 1;
     right: 8px;
 }
@@ -115,8 +119,10 @@ input[type=range][orient=vertical] {
 .input_vertical .css-tzssek-MuiSvgIcon-root {
     position: absolute;
     right: 3px;
-    top: 75%;
+
 }
+
+/* <<<<-----brigthness hover show hide functionality------>>>> */
 
 .hide:hover .hide-item,
 .hide:focus .hide-item {
@@ -209,25 +215,3 @@ input[type=range][orient=vertical] {
     /* height: 100%; */
     z-index: 9999;
 }
-
-/* .custom-controls {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 5px;
-} */
-
-/* .custom-controls button {
-    background-color: transparent;
-    border: none;
-    color: white;
-    cursor: pointer;
-    font-size: 16px;
-    margin-right: 10px;
-}
-
-.custom-controls button:hover {
-    text-decoration: underline;
-} */

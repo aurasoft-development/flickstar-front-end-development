@@ -20,19 +20,10 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import ScreenShareIcon from '@mui/icons-material/ScreenShare';
 import '../../assets/css/VideoPlayer.css'
 import { Menu, MenuItem } from '@mui/material';
-
-
-const captions = `
-WEBVTT
-
-1
-00:00:00.000 --> 00:00:05.000
-This is the first caption.
-
-2
-00:00:05.500 --> 00:00:10.000
-This is the second caption.
-`;
+import { useDispatch } from "react-redux";
+import { addRange } from '../../features/movies/movies.details';
+import SettingMenu from './setting/SettingMenu';
+import { useTranslation } from 'react-i18next';
 
 const VideoPlayer = ({ videoUrl, subtitles, show, setShow }) => {
     const [playing, setPlaying] = useState(false);
@@ -50,7 +41,15 @@ const VideoPlayer = ({ videoUrl, subtitles, show, setShow }) => {
     const prevPlayed = useRef(null);
     const [isFullScreen, setIsFullScreen] = useState(false);
     const [isSeeking, setIsSeeking] = useState(false);
+    const dispatch = useDispatch()
 
+
+
+    // input range countinue watching functionality
+
+    const countinueWatching = () => {
+        dispatch(addRange(played))
+    }
 
     //sheeking and onProgress
 
@@ -80,7 +79,6 @@ const VideoPlayer = ({ videoUrl, subtitles, show, setShow }) => {
     // show hide popup
     const hidePopup = () => {
         setShow(false);
-        setVideoId(null);
     };
 
     // play pause
@@ -176,7 +174,8 @@ const VideoPlayer = ({ videoUrl, subtitles, show, setShow }) => {
         playerRef.current.seekTo(0); // Restart video when quality changes
     };
 
-
+    // vidoo url 
+    const { t } = useTranslation();
     return (
         <div className={`videoPopup ${show ? "visible" : ""}`}>
             <div className="opacityLayer" ></div>
@@ -185,14 +184,17 @@ const VideoPlayer = ({ videoUrl, subtitles, show, setShow }) => {
                 <div className='video_player_first'>
                     <div className='first_div_main closeBtn'>
                         <div className='arrow_div_main'>
-                            <div onClick={() => { setPlaying(false); hidePopup() }}> <ArrowBackIcon /></div>
+                            <div onClick={() => { setPlaying(false); hidePopup(); countinueWatching() }}> <ArrowBackIcon /></div>
                             <span className='movies_title_name'>Movies Name</span>
                         </div>
 
                         <div className='setting_icon'>
-                            <div> <SettingsIcon /></div>
+                            <div>
+                                {/* <SettingsIcon /> */}
+                                <SettingMenu />
+                            </div>
                             <div> <ScreenShareIcon /></div>
-                            <div onClick={() => { setPlaying(false); hidePopup() }}> < CloseIcon /> </div>
+                            <div onClick={() => { setPlaying(false); hidePopup(); countinueWatching() }}> < CloseIcon /> </div>
                         </div>
 
                     </div>
@@ -216,8 +218,9 @@ const VideoPlayer = ({ videoUrl, subtitles, show, setShow }) => {
                 </div>
 
                 <div className='video_player_second'>
+                    {console.log('videoURL------>', t('videoURL'))}
                     <ReactPlayer
-                        url={videoUrl}
+                        url={t('videoURL')}
                         controls={false} // Show video controls
                         ref={playerRef}
                         config={{
