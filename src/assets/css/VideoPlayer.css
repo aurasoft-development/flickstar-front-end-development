@@ -215,3 +215,76 @@ input[type=range][orient=vertical] {
     /* height: 100%; */
     z-index: 9999;
 }
+
+.video_palyer_control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.video_cap_control {
+    display: flex;
+    gap: 10px;
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<----------------------responsive video player ------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media(max-width:1920px) {
+    div.react-player__preview {
+        height: 800px !important;
+    }
+}
+
+@media(max-width:1440px) {
+    div.react-player__preview {
+        height: 600px !important;
+    }
+}
+
+@media(max-width:1024px) {
+    div.react-player__preview {
+        height: 410px !important;
+    }
+}
+
+@media(max-width:1024px) {
+    div.react-player__preview {
+        height: 410px !important;
+    }
+}
+
+@media(max-width:768px) {
+    div.react-player__preview {
+        height: 290px !important;
+    }
+}
+
+@media(max-width:426px) {
+    div.react-player__preview {
+        height: 150px !important;
+    }
+
+    .css-tzssek-MuiSvgIcon-root {
+        width: 20px !important;
+    }
+}
+
+@media(max-width:376px) {
+    div.react-player__preview {
+        height: 130px !important;
+    }
+
+    .video_palyer_control {
+        gap: 0px;
+    }
+
+    .video_cap_control {
+        gap: 0px;
+    }
+}
+
+@media(max-width:321px) {
+    div.react-player__preview {
+        height: 100px !important;
+    }
+}

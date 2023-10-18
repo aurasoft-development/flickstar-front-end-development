@@ -1,13 +1,15 @@
-import * as React from 'react';
+// LanguageSelector.js
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { setLanguage } from '../../../features/video-player/videoSlice';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import Fade from '@mui/material/Fade';
-import { changeLang } from '../../../App';
 
-export default function LanguageSelector() {
+export default function BasicMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+  const dispatch = useDispatch();
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -15,29 +17,31 @@ export default function LanguageSelector() {
     setAnchorEl(null);
   };
 
+  const handleLanguageChange = (language) => {
+    dispatch(setLanguage(language));
+  };
   return (
     <div>
       <Button
-        id="fade-button"
-        aria-controls={open ? 'fade-menu' : undefined}
+        id="basic-button"
+        aria-controls={open ? 'basic-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        language
+        Language
       </Button>
       <Menu
-        id="fade-menu"
-        MenuListProps={{
-          'aria-labelledby': 'fade-button',
-        }}
+        id="basic-menu"
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
-        TransitionComponent={Fade}
+        MenuListProps={{
+          'aria-labelledby': 'basic-button',
+        }}
       >
-        <MenuItem onClick={() => { handleClose; changeLang('ve') }}>English</MenuItem>
-        <MenuItem onClick={() => { handleClose; changeLang('vi_hi') }}>hindi</MenuItem>
+        <MenuItem onClick={() => { handleClose; handleLanguageChange('en') }}>English</MenuItem>
+        <MenuItem onClick={() => { handleClose; handleLanguageChange('hi') }}>Hindi</MenuItem>
       </Menu>
     </div>
   );

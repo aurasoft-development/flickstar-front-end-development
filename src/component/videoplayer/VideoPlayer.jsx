@@ -19,13 +19,17 @@ import SensorsIcon from '@mui/icons-material/Sensors';
 import SettingsIcon from '@mui/icons-material/Settings';
 import ScreenShareIcon from '@mui/icons-material/ScreenShare';
 import '../../assets/css/VideoPlayer.css'
+import english_video from '../../assets/video/english_video.mp4'
+import video_medium from '../../assets/video/video_medium.mp4'
 import { Menu, MenuItem } from '@mui/material';
-import { useDispatch } from "react-redux";
-import { addRange } from '../../features/movies/movies.details';
+import { useDispatch, useSelector } from "react-redux";
+// import { addRange } from '../../features/movies/movies.details';
 import SettingMenu from './setting/SettingMenu';
-import { useTranslation } from 'react-i18next';
+import { setVideoUrl } from '../../features/video-player/videoSlice';
+import movies_poster from '../../assets/images/kids/kids_slider.png'
+import { addRange } from '../../features/movies/AddRange';
 
-const VideoPlayer = ({ videoUrl, subtitles, show, setShow }) => {
+const VideoPlayer = ({ show, setShow }) => {
     const [playing, setPlaying] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
@@ -41,7 +45,27 @@ const VideoPlayer = ({ videoUrl, subtitles, show, setShow }) => {
     const prevPlayed = useRef(null);
     const [isFullScreen, setIsFullScreen] = useState(false);
     const [isSeeking, setIsSeeking] = useState(false);
+    const videoUrl = useSelector((state) => state.video.url);
+    const language = useSelector((state) => state.video.language);
+    const playbackRate = useSelector((state) => state.playbackRate);
     const dispatch = useDispatch()
+
+    // Define a map of video URLs for different languages
+    const languageVideoUrls = {
+        en: english_video,
+        hi: video_medium,
+        // Add more language URLs as needed
+    };
+
+    // Based on the selected language, choose the appropriate video URL
+    const getLocalizedVideoUrl = () => {
+        return languageVideoUrls[language] || languageVideoUrls.en;
+    };
+
+    // Set the video URL in the Redux store when it changes
+    React.useEffect(() => {
+        dispatch(setVideoUrl(getLocalizedVideoUrl()));
+    }, [language, dispatch]);
 
 
 
@@ -174,8 +198,7 @@ const VideoPlayer = ({ videoUrl, subtitles, show, setShow }) => {
         playerRef.current.seekTo(0); // Restart video when quality changes
     };
 
-    // vidoo url 
-    const { t } = useTranslation();
+
     return (
         <div className={`videoPopup ${show ? "visible" : ""}`}>
             <div className="opacityLayer" ></div>
@@ -218,9 +241,8 @@ const VideoPlayer = ({ videoUrl, subtitles, show, setShow }) => {
                 </div>
 
                 <div className='video_player_second'>
-                    {console.log('videoURL------>', t('videoURL'))}
                     <ReactPlayer
-                        url={t('videoURL')}
+                        url={videoUrl}
                         controls={false} // Show video controls
                         ref={playerRef}
                         config={{
@@ -235,7 +257,8 @@ const VideoPlayer = ({ videoUrl, subtitles, show, setShow }) => {
                         width="100%"
                         height={"auto"}
                         quality={selectedQuality}
-                        playbackRate={1.0}
+                        playbackRate={playbackRate}
+                        light={movies_poster}
                         onProgress={({ played }) => {
                             // Update the played state while the video is playing
                             if (!isSeeking) {
@@ -278,7 +301,7 @@ const VideoPlayer = ({ videoUrl, subtitles, show, setShow }) => {
                             </div>
                         </div>
 
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                        <div className='video_palyer_control'>
                             <div style={{ alignSelf: 'center' }}> {formatTime(currentTime)} </div>
                             <div onClick={handleBackward}><Replay10Icon fontSize='large' /></div>
                             <div onClick={togglePlayPause}>
@@ -289,7 +312,7 @@ const VideoPlayer = ({ videoUrl, subtitles, show, setShow }) => {
                             <div style={{ alignSelf: 'center' }}>{formatTime(duration)} </div>
                         </div>
 
-                        <div style={{ display: 'flex', gap: '10px' }}>
+                        <div className='video_cap_control'>
                             <div><SensorsIcon fontSize='large' /></div>
                             <div onClick={() => setSubtitlesEnabled(!subtitlesEnabled)}>
                                 {subtitlesEnabled ? <ClosedCaptionOffIcon fontSize='large' /> : <ClosedCaptionOffIcon fontSize='large' />}

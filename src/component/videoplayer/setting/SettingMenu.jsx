@@ -6,6 +6,7 @@ import { Box, Divider, Typography, Avatar, IconButton, Popover } from '@mui/mate
 import { useNavigate } from 'react-router-dom';
 import SettingsIcon from '@mui/icons-material/Settings';
 import LanguageSelector from './LanguageSelector';
+import PlayRate from './PlayRate';
 // import logout from '../../../assets/images/logout.png'
 // css
 // import '../../../assets/css/AccontPopver.css'
@@ -66,9 +67,12 @@ export default function SettingMenu() {
             >
                 <Box sx={{ my: 1.5, px: 2.5 }} display={'flex'} flexDirection={'column'} gap={1}>
 
-                    <div className='account_p_div_main cursor_pointer'>
+                    <div className=' cursor_pointer '>
                         <Typography variant="subtitle2" noWrap>
-                           <LanguageSelector />
+                            <LanguageSelector />
+                        </Typography>
+                        <Typography variant="subtitle2" noWrap>
+                            <PlayRate />
                         </Typography>
                     </div>
 
