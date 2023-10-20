@@ -3,6 +3,8 @@ import '../assets/css/Movies.css'
 import Footer from '../component/Footer';
 import KidsListSlider from '../component/kids/KidsListSlider';
 import KidsList from '../component/kids/KidsList';
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const images = [
     "https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
@@ -20,6 +22,16 @@ const images = [
 ];
 
 const Kids = () => {
+    const navigate = useNavigate();
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        const token = localStorage.getItem('user_login')
+        if (!token) {
+          navigate('/login')
+        }
+      }, 300000);
+      return () => clearTimeout(timer);
+    }, []);
     return (
         <div className='flickstar_container'>
             <KidsListSlider />

@@ -7,15 +7,18 @@ import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 import AddIcon from '@mui/icons-material/Add';
 import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux'
 import logout from '../../../assets/images/logout.png'
 // css
 import '../../../assets/css/AccontPopver.css'
+import { loginAuth } from '../../../features/auth/LoginSlice';
 // ----------------------------------------------------------------------
 
 
 export default function AccountPopover() {
   const [open, setOpen] = useState(null);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const handleOpen = (event) => {
     setOpen(event.currentTarget);
   };
@@ -111,7 +114,7 @@ export default function AccountPopover() {
         <div className='cursor_pointer account_p_logout'>
           {/* <LogoutRoundedIcon /> */}
           <img src={logout} width={20} height={20} />
-          <Typography variant="subtitle2" noWrap onClick={() => { localStorage.removeItem('user_login'); navigate('/login') }}>
+          <Typography variant="subtitle2" noWrap onClick={() => { localStorage.removeItem('user_login'); navigate('/login'); dispatch(loginAuth('false')) }} >
             Logout
           </Typography>
         </div>

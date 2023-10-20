@@ -179,12 +179,12 @@ const VideoPlayer = ({ show, setShow }) => {
 
     //video quality 
     const videoQualities = [
-        { label: 'SD', value: 'URL_TO_LOW_QUALITY_VIDEO' },
-        { label: 'HD', value: 'URL_TO_MEDIUM_QUALITY_VIDEO' },
-        { label: 'FHD', value: 'URL_TO_HIGH_QUALITY_VIDEO' },
+        { label: 'SD', value: english_video },
+        { label: 'HD', value: video_medium },
+        { label: 'FHD', value: english_video },
         // Add more quality options as needed
     ];
-
+ 
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);

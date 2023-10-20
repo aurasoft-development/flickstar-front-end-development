@@ -5,6 +5,8 @@ import ViewRelated from '../component/moviesdetails/ViewRelated';
 import ViewDetails from '../component/moviesdetails/ViewDetails';
 import Footer from '../component/Footer';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 const images = [
     "https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
     "https://images.unsplash.com/photo-1549396535-c11d5c55b9df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
@@ -25,6 +27,16 @@ const MoviesDetails = () => {
         return state.movies;
     })
 
+    const navigate = useNavigate();
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            const token = localStorage.getItem('user_login')
+            if (!token) {
+                navigate('/login')
+            }
+        }, 300000);
+        return () => clearTimeout(timer);
+    }, []);
     return (
         <div className='--background'>
             <View />

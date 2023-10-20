@@ -15,6 +15,7 @@ import icon_flickstar from '../../../assets/images/icon_flickstar.png'
 import AccountPopover from '../header/AccountPopover';
 //css
 import '../../../assets/css/side.nav.css'
+import { useSelector } from 'react-redux';
 // ----------------------------------------------------------------------
 
 const NAV_WIDTH = 280;
@@ -36,8 +37,9 @@ Nav.propTypes = {
 
 export default function Nav({ openNav, onCloseNav }) {
   const [language, setLanguage] = useState('')
-  const [login, setLogin] = useState(true)
+  const [login, setLogin] = useState('')
   const navigate = useNavigate();
+  const data = useSelector((state) => state.login)
 
   const handleChange = (event) => {
     setLanguage(event.target.value);
@@ -61,6 +63,10 @@ export default function Nav({ openNav, onCloseNav }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  useEffect(() => {
+    const token = localStorage.getItem('user_login')
+    setLogin(token)
+  }, []);
   const renderContent = (
     <Scrollbar
       sx={{
@@ -69,7 +75,7 @@ export default function Nav({ openNav, onCloseNav }) {
       }}
     >
       <Box sx={{ mb: 5, mx: 2.5 }} className='header_nav_box_main'>
-        <Link underline="none">
+        {data === "true" ? <Link underline="none">
           <StyledAccount>
             <AccountPopover />
             <Box sx={{ ml: 2 }}>
@@ -81,7 +87,7 @@ export default function Nav({ openNav, onCloseNav }) {
               </Typography>
             </Box>
           </StyledAccount>
-        </Link>
+        </Link> : ""}
       </Box>
       <Box sx={{ px: 2.5 }} className='side_nav_main'>
         <div className='nav_title cursor_pointer' onClick={() => navigate('/')} ><img src={icon_flickstar} width={126.27} height={27.86} /></div>

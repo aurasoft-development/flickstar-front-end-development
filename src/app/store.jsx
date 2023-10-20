@@ -4,7 +4,7 @@ import profileSlice from '../features/profile/profile.slice';
 import videoSlice from '../features/video-player/videoSlice';
 import playbackRateSlice from '../features/video-player/playbackRateSlice';
 import AddRange from '../features/movies/AddRange';
-// import { addRange } from '../features/movies/AddRange';
+import LoginSlice from '../features/auth/LoginSlice';
 
 const store = configureStore({
     reducer: {
@@ -13,6 +13,7 @@ const store = configureStore({
         video: videoSlice,
         playbackRate: playbackRateSlice,
         range: AddRange,
+        login: LoginSlice
     }
 })
 

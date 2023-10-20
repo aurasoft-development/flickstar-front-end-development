@@ -34,14 +34,13 @@ const Otp = () => {
         }
     };
 
-    // console.log("otp-->",otpValues)
     const handleSubmit = () => {
 
         if (otpValues && otpValues[0] === '' || otpValues[1] === '' || otpValues[2] === '' || otpValues[3] === '') {
             toast.warn('Please Enter Otp')
 
         }
-        else{
+        else {
             toast.success('Otp Submit successfully')
             navigate('/reset_password')
         }

@@ -4,7 +4,7 @@ import Input from '@mui/material/Input';
 import fluent_eye from '../../assets/images/fluent_eye.png'
 import Validation from '../../utils/Validation';
 import '../../assets/css/Register.css'
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next';
 
 
@@ -38,7 +38,7 @@ const Register = () => {
         <div className='main'>
             <Container width='100%'>
                 <div className='wrapper'>
-                    <div className='skipBtn'>{t('SKIP_FOR_NOW')}</div>
+                    <div className='skipBtn' onClick={() => navigate('/movies')}>{t('SKIP_FOR_NOW')}</div>
                     <div className='div_section_main' >
                         <h2 className='login_heading'>{t('REGISTER')}</h2>
                         <span className='login_plan_text'>{t('FLICKSTAR_FEATURES_BENEFITS')}</span>
@@ -99,7 +99,7 @@ const Register = () => {
 
                         </form>
                         <div className='page_redirect'>
-                            <span>{t('NEW_TO_FLICKSTAR')} <u className='cursor_pointer' onClick={()=>navigate('/login')}>{t('SIGN_IN_NOW')}</u></span>
+                            <span>{t('NEW_TO_FLICKSTAR')} <u className='cursor_pointer' onClick={() => navigate('/login')}>{t('SIGN_IN_NOW')}</u></span>
                         </div>
                     </div>
                 </div>

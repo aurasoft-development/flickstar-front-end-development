@@ -30,7 +30,6 @@ const View = () => {
     const navigate = useNavigate()
 
     const data = useSelector((state) => state.range.slice(-1))
-    console.log('data range---->', data)
     return (
         <div>
             <div className='flickstar_details_container' >

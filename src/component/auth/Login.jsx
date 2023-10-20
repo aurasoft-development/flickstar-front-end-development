@@ -9,6 +9,8 @@ import Validation from '../../utils/Validation';
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next';
 import { toast } from 'react-toastify';
+import { useDispatch } from 'react-redux'
+import { loginAuth } from '../../features/auth/LoginSlice';
 
 const Login = () => {
     const [formErrors, setFormErrors] = useState({})
@@ -21,6 +23,8 @@ const Login = () => {
     const [formValues, setFormValues] = useState(initialValues)
     const [showPassword, setShowPassword] = React.useState(false);
     const navigate = useNavigate()
+    const dispatch = useDispatch()
+
 
     const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -36,6 +40,7 @@ const Login = () => {
 
     const { t } = useTranslation();
 
+
     const handleSubmitData = () => {
         const { email_or_phone, password } = formValues;
         if (!email_or_phone || !password) {
@@ -44,6 +49,7 @@ const Login = () => {
         else {
             toast.success('Login Done')
             localStorage.setItem('user_login', 'true')
+            // dispatch(loginAuth('true'))
             navigate('/choose_plan');
         }
     }
