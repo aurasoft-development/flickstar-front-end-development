@@ -150,7 +150,11 @@
 
 @media(max-width:425px) {
     .footer_section3 {
-        padding: 0%;
+        padding: 0% 30px;
+    }
+
+    .footer_text {
+        padding: 0% 30px;
     }
 
     .footer_d_row {

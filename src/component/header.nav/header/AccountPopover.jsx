@@ -12,6 +12,7 @@ import logout from '../../../assets/images/logout.png'
 // css
 import '../../../assets/css/AccontPopver.css'
 import { loginAuth } from '../../../features/auth/LoginSlice';
+import { useTranslation } from 'react-i18next';
 // ----------------------------------------------------------------------
 
 
@@ -32,6 +33,7 @@ export default function AccountPopover() {
     photoURL: 'https://imgv3.fotor.com/images/gallery/Realistic-Male-Profile-Picture.jpg',
   };
 
+  const { t } = useTranslation();
   return (
     <>
       <IconButton
@@ -77,35 +79,35 @@ export default function AccountPopover() {
 
           <div className='account_p_div_main cursor_pointer'> <Avatar src='https://imgv3.fotor.com/images/gallery/Realistic-Male-Profile-Picture.jpg' height={50} width={50} />
             <Typography variant="subtitle2" noWrap>
-              Erik
+              {t('ERIK')}
             </Typography>
           </div>
           <div className='account_p_div_main cursor_pointer'> <Avatar src='' height={50} width={50} />
             <Typography variant="subtitle2" noWrap>
-              Dorta
+              {t('DORTA')}
             </Typography>
           </div>
           <div className='account_p_div_main cursor_pointer'> <Avatar src='' height={50} width={50} />
             <Typography variant="subtitle2" noWrap>
-              Dorta
+              {t('DORTA')}
             </Typography>
           </div>
           <div className='account_p_div_main cursor_pointer'>
             <ManageAccountsIcon fontSize='large' />
             <Typography variant="subtitle2" noWrap>
-              My Account
+              {t('MY_ACCOUNT')}
             </Typography>
           </div>
           <div className='account_p_div_main cursor_pointer'>
             <AddIcon fontSize='large' />
             <Typography variant="subtitle2" noWrap onClick={() => navigate('/watch')}>
-              Watch LIst
+              {t('WATCH_LIST')}
             </Typography>
           </div>
           <div className='account_p_div_main cursor_pointer'>
             <AddIcon fontSize='large' />
             <Typography variant="subtitle2" noWrap onClick={() => navigate('/manage_profile')}>
-              Manage Profile
+              {t('MANAGE_PROFILE')}
             </Typography>
           </div>
 
@@ -115,7 +117,7 @@ export default function AccountPopover() {
           {/* <LogoutRoundedIcon /> */}
           <img src={logout} width={20} height={20} />
           <Typography variant="subtitle2" noWrap onClick={() => { localStorage.removeItem('user_login'); navigate('/login'); dispatch(loginAuth('false')) }} >
-            Logout
+            {t('LOGOUT')}
           </Typography>
         </div>
       </Popover>

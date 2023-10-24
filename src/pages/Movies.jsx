@@ -5,6 +5,7 @@ import Footer from '../component/Footer';
 import MoviesListSlider from '../component/movies/MoviesListSlider';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next';
 
 const images = [
   "https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
@@ -32,14 +33,15 @@ const Movies = () => {
     }, 300000);
     return () => clearTimeout(timer);
   }, []);
+  const { t } = useTranslation();
   return (
     <div className='flickstar_container'>
       <MoviesListSlider />
-      <MoviesList heading={"Continue Watching"} dynamicClass={"small_width"} dynamicHeight={'small_height'} images={images} />
-      <MoviesList heading={"Movies For You"} dynamicClass={"medium_width"} dynamicHeight={'medium_height'} images={images} />
-      <MoviesList heading={"Series For You"} dynamicClass={"large_width"} dynamicHeight={'large_height'} images={images} />
-      <MoviesList heading={"Kids For You"} dynamicClass={"large_width"} dynamicHeight={'large_height'} images={images} />
-      <MoviesList heading={"Flickstar Original Movies"} dynamicClass={"medium_width"} dynamicHeight={'medium_height'} images={images} />
+      <MoviesList heading={t('CONTINUE_WATCHING')} dynamicClass={"small_width"} dynamicHeight={'small_height'} images={images} />
+      <MoviesList heading={t('MOVIES_FOR_YOU')} dynamicClass={"medium_width"} dynamicHeight={'medium_height'} images={images} />
+      <MoviesList heading={t('SERIES_FOR_YOU')} dynamicClass={"large_width"} dynamicHeight={'large_height'} images={images} />
+      <MoviesList heading={t('KIDS_FOR_YOU')} dynamicClass={"large_width"} dynamicHeight={'large_height'} images={images} />
+      <MoviesList heading={t('FLICKSTAR_ORIGINAL_MOVIES')} dynamicClass={"medium_width"} dynamicHeight={'medium_height'} images={images} />
 
       <Footer />
     </div>

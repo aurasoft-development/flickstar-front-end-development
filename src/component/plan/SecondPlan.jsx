@@ -4,6 +4,7 @@ import { Button, Radio } from '@mui/material';
 import { orange } from '@mui/material/colors';
 import Frame from '../../assets/images/choose_plan/Frame.png'
 import { useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next';
 
 const SecondPlan = () => {
   const [selectedValue, setSelectedValue] = React.useState();
@@ -21,37 +22,38 @@ const SecondPlan = () => {
     inputProps: { 'aria-label': item },
   });
 
+  const { t } = useTranslation();
   return (
     <div className='choose_plan_container'>
       <div className='choose_plan_wrapper'>
         <div className='choose_div_first'>
-          <span className='choose_div_first_span1'>Welcome to flickstar</span>
-          <p className='choose_p'>Select your magic plan</p>
+          <span className='choose_div_first_span1'>{t("WELCOME_TO_FLICKSTAR")}</span>
+          <p className='choose_p'>{t("SELECT_YOUT_MAGIC_PLAN")}</p>
           <div className='choose_img_div'>
             <img src={Frame} width={35} height={35} />
-            <span className='choose_img_span'>Ad-Lite* Access to Premium Shows &Movies</span>
+            <span className='choose_img_span'>{t('AD_LITE_ACCESS_PREMIUM')}</span>
           </div>
           <div className='choose_img_div'>
             <img src={Frame} width={35} height={35} />
-            <span className='choose_img_span' >Download Shows & Movies**</span>
+            <span className='choose_img_span' >{t('DOWNLOAD_SHOWS')}</span>
           </div>
           <div className='choose_img_div'>
             <img src={Frame} width={35} height={35} />
-            <span className='choose_img_span'>Watch on 3 screens parallelly</span>
+            <span className='choose_img_span'>{t('WATCH_ON_3_SCREENS')}</span>
           </div>
           <div className='choose_img_div'>
             <img src={Frame} width={35} height={35} />
-            <span className='choose_img_span_1'>Exclusive access to Premium Shows & Movies</span>
+            <span className='choose_img_span_1'>{t('EXCLUSIVE_ACCESS_TO_PREMIUM')}</span>
           </div>
           <div className='choose_img_div'>
             <img src={Frame} width={35} height={35} />
-            <span className='choose_img_span'>Ad-Lite experience on Local Tab***</span>
+            <span className='choose_img_span'>{t('AD_LITE_EXPRIENCE_ON_LOCAL')}</span>
           </div>
-          <p className='choose_img_p'>* Some titles may contain ads even after subscribing.** Download feature on some titles may be disabledpertaining to rights.*** Only available on Android</p>
+          <p className='choose_img_p'>{t('SOME_TITLES_MAY_CONTAIN')}</p>
         </div>
         <div className='choose_div_second'>
-          <div><span className='choose_second_span1'>Choose Plan</span></div>
-          <div className='choose_second_div'><span>Subscription will be linked to </span> <p className='choose_sec_color'>flickstar@gmail.com</p></div>
+          <div><span className='choose_second_span1'>{t('CHOOSE_PLAN')}</span></div>
+          <div className='choose_second_div'><span>{t('SUBCRIPTION_WILL_BE_LINKED')}</span> <p className='choose_sec_color'>{t('FILCKSTAR_GMAIL')}</p></div>
           <div className='choose_second_img_div'>
             <Radio
               {...controlProps('a')}
@@ -63,13 +65,12 @@ const SecondPlan = () => {
               }}
             />
             <div className='choose_second_div_inside'>
-              <span className='choose_second_inside_span'>Starter</span>
-              <span className='choose_second_inside_span1'>For the new marketer on a budget whojust wants
-                basic tracking...</span>
+              <span className='choose_second_inside_span'>{t('STARTER')}</span>
+              <span className='choose_second_inside_span1'>{t('BASIC_TRACKING')}</span>
             </div>
             <div className='choose_second_div_inside'>
-              <span className='choose_second_span_year'>$37 / year</span>
-              <span className='choose_second_span_year1'>$50 / year</span>
+              <span className='choose_second_span_year'>{t('37_YEAR')}</span>
+              <span className='choose_second_span_year1'>{t('50_YEAR')}</span>
             </div>
           </div>
           <div className='choose_second_img_div'>
@@ -83,13 +84,12 @@ const SecondPlan = () => {
               }}
             />
             <div className='choose_second_div_inside'>
-              <span className='choose_second_inside_span'>standard</span>
-              <span className='choose_second_inside_span1'>For the new marketer on a budget whojust wants
-                basic tracking...</span>
+              <span className='choose_second_inside_span'>{t('STANDARD')}</span>
+              <span className='choose_second_inside_span1'>{t('BASIC_TACKING_1')}</span>
             </div>
             <div className='choose_second_div_inside'>
-              <span className='choose_second_span_year'>$37 / year</span>
-              <span className='choose_second_span_year1'>$50 / year</span>
+              <span className='choose_second_span_year'>{t('37_YEAR_1')}</span>
+              <span className='choose_second_span_year1'>{t('50_YEAR_1')}</span>
             </div>
           </div>
           <div className='choose_second_img_div'>
@@ -103,16 +103,15 @@ const SecondPlan = () => {
               }}
             />
             <div className='choose_second_div_inside'>
-              <span className='choose_second_inside_span'>pro</span>
-              <span className='choose_second_inside_span1'> For the new marketer on a budget whojust wants
-                basic tracking...</span>
+              <span className='choose_second_inside_span'>{t('PRO')}</span>
+              <span className='choose_second_inside_span1'> {t('BASIC_TACKING_2')}</span>
             </div>
             <div className='choose_second_div_inside'>
-              <span className='choose_second_span_year'>$37 / year</span>
-              <span className='choose_second_span_year1'>$50 / year</span>
+              <span className='choose_second_span_year'>{t('37_YEAR_2')}</span>
+              <span className='choose_second_span_year1'>{t('50_YEAR_2')}</span>
             </div>
           </div>
-          <div><Button className='choose_button' sx={{ textTransform: "none" }} onClick={() => navigate('/movies')}>Buy Now</Button></div>
+          <div><Button className='choose_button' sx={{ textTransform: "none" }} onClick={() => navigate('/movies')}>{t('BUY_NOW')}</Button></div>
         </div>
       </div>
     </div>

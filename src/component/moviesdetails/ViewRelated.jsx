@@ -4,6 +4,7 @@ import Carousel from "react-multi-carousel";
 import '../../assets/css/FlickstarDetails.css'
 import { useDispatch } from "react-redux";
 import { changeComponent } from "../../features/movies/movies.details";
+import { useTranslation } from "react-i18next";
 
 const responsive = {
     desktop: {
@@ -26,13 +27,14 @@ const responsive = {
 
 const ViewRelated = ({ heading, dynamicClass, images, dynamicHeight }) => {
     const dispatch = useDispatch()
+    const { t } = useTranslation();
     return (
         <div className="menulist_container p-l p-r">
             <div className="menulist_wrapper ">
                 <span>{heading}</span>
                 <div className="menu_div_heading">
-                    <span className="view_carousel_span" onClick={()=>dispatch(changeComponent(true))}>Related</span>
-                    <span className="view_rel_detail" onClick={() => dispatch(changeComponent(false))} >Details</span>
+                    <span className="view_carousel_span" onClick={() => dispatch(changeComponent(true))}>{t('RELATED')}</span>
+                    <span className="view_rel_detail" onClick={() => dispatch(changeComponent(false))} >{t('DETAILS')}</span>
                 </div>
             </div>
             <Carousel
@@ -43,9 +45,9 @@ const ViewRelated = ({ heading, dynamicClass, images, dynamicHeight }) => {
                 infinite={true}
                 className={dynamicClass}
             >
-                {images.map(image => {
+                {images.map((image, index) => {
                     return (
-                        <div className={dynamicClass}>
+                        <div className={dynamicClass} key={index}>
                             <Card >
                                 <CardActionArea>
                                     <CardMedia

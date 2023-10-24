@@ -287,4 +287,12 @@ input[type=range][orient=vertical] {
     div.react-player__preview {
         height: 100px !important;
     }
+
+    input[type=range][orient=vertical] {
+        height: 50px !important;
+    }
+
+    .input_vertical .css-tzssek-MuiSvgIcon-root {
+        right: 9px !important;
+    }
 }

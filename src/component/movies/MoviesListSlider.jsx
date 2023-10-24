@@ -10,6 +10,7 @@ import '../../assets/css/Carousel.css'
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
+import { useTranslation } from 'react-i18next';
 
 const images = [
   {
@@ -40,6 +41,7 @@ const MoviesListSlider = () => {
     nav: true,
     swipeable: true
   };
+  const { t } = useTranslation()
   return (
     <Box className="box_main ">
       <OwlCarousel className="owl-theme" {...options}>
@@ -50,17 +52,16 @@ const MoviesListSlider = () => {
                 <img src={logo_image} width={229} height={142} />
               </div>
               <div className='carousel_span_main'>
-                <span className='carousel_span'>2023</span>
-                <span className='carousel_span back_color'>12+</span>
-                <span className='carousel_span b_left '>1 hour 15min</span>
-                <span className='carousel_span'>Action</span>
+                <span className='carousel_span'>{t('2023')}</span>
+                <span className='carousel_span back_color'>{t('12+')}</span>
+                <span className='carousel_span b_left '>{t('MOVIES_TIME')}</span>
+                <span className='carousel_span'>{t('ACTION')}</span>
               </div>
-              <span className='carousel_span1'>Barney assembles a new and younger team to capture Stonebanks, a
-                co-founder of the Expendables. However, Stonebanks ends up capturing the new team and challenges an escaped Barney to save them.</span>
+              <span className='carousel_span1'>{t('BARNEY_ASSEMBLES')}</span>
               <div className='carousel_div_botton custom_button_1 '>
                 <Button className='carousel_button'>
                   <img src={play} width={21} height={18} />
-                  <span>watch</span>
+                  <span>{t('WATCHS')}</span>
                 </Button>
                 <div className='carousel_icon_image' ><img src={plus} width={24} height={23} /> </div>
                 <div className='carousel_icon_image' ><img src={info} width={24} height={23} /> </div>

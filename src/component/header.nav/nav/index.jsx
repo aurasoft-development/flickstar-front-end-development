@@ -40,6 +40,7 @@ export default function Nav({ openNav, onCloseNav }) {
   const [login, setLogin] = useState('')
   const navigate = useNavigate();
   const data = useSelector((state) => state.login)
+  console.log("login redux ------>", data)
 
   const handleChange = (event) => {
     setLanguage(event.target.value);
@@ -63,10 +64,10 @@ export default function Nav({ openNav, onCloseNav }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  useEffect(() => {
-    const token = localStorage.getItem('user_login')
-    setLogin(token)
-  }, []);
+  // useEffect(() => {
+  //   const token = localStorage.getItem('user_login')
+  //   setLogin(token)
+  // }, []);
   const renderContent = (
     <Scrollbar
       sx={{

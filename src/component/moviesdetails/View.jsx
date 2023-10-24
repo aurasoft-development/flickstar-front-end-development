@@ -11,42 +11,33 @@ import { useNavigate } from 'react-router-dom'
 import video from '../../assets/video/video_medium.mp4'
 import VideoPlayer from '../../component/videoplayer/VideoPlayer.jsx'
 import { useSelector } from 'react-redux'
+import { useTranslation } from 'react-i18next'
 
 
 
 const View = () => {
     const [show, setShow] = useState(false);
     const [val, setVal] = useState(3);
-    // const audioTrack = [
-    //     {
-    //         lable: "video player testing",
-    //         src: 'www.video_player.com'
-    //     },
-    //     {
-    //         lable: "video player testing1",
-    //         src: 'www.video_player.com1'
-    //     }
-    // ]
     const navigate = useNavigate()
-
     const data = useSelector((state) => state.range.slice(-1))
+    const { t } = useTranslation();
     return (
         <div>
             <div className='flickstar_details_container' >
                 <div className='flickstar_details_sec_first p-l'>
-                    <h1 className='flickstar_details_h1'>The Lair</h1>
+                    <h1 className='flickstar_details_h1'>{t('THE_LAIR')}</h1>
                     <div className='flickstar_details_span_main'>
-                        <span className='carousel_span'>2023</span>
-                        <span className='carousel_span back_color'>12+</span>
-                        <span className='carousel_span b_left '>1 hour 15min</span>
-                        <span className='carousel_span'>Action</span>
+                        <span className='carousel_span'>{t('2023_1')}</span>
+                        <span className='carousel_span back_color'>{t('12+_1')}</span>
+                        <span className='carousel_span b_left '>{t('MOVIES_TIME_1')}</span>
+                        <span className='carousel_span'>{t('ACTION_1')}</span>
                     </div>
-                    <span className='carousel_span1'>Shot down over one of the most dangerous rebel strongholds in Afghanistan, a Royal Air Force pilot discovers an abandoned Soviet Research Facility concealed in the remote hills. She finds refuge in an underground bunker where deadly man-made biological weapons</span>
+                    <span className='carousel_span1'>{t('SHOT_DOWN_OVER')}</span>
                     <div className='carousel_div_botton custom_button'>
                         <Button className='carousel_button'>
                             <img src={play} width={21} height={18} />
                             <div className='countinue_range'>
-                                <span onClick={() => setShow(true)}>Continue Watching</span>
+                                <span onClick={() => setShow(true)}>{t('CONTINUE_WATCHING_1')}</span>
                                 <input type='range' min={0} max={1} step="any"
                                     value={data[0] > 0 ? data[0] : 0}
                                 />
@@ -65,9 +56,8 @@ const View = () => {
             <VideoPlayer
                 show={show}
                 setShow={setShow}
-                videoUrl={video}
-                subtitles={"hello"}
-            // audioTracks={audioTrack}
+            // videoUrl={video}
+            // subtitles={"hello"}
             />
         </div>
     )

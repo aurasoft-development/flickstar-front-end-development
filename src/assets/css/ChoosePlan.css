@@ -166,7 +166,7 @@
 }
 
 .fist_plan_div {
-    max-width: 284px !important;
+    max-width: 304px !important;
     width: 100% !important;
     display: flex;
     flex-direction: column;
@@ -195,7 +195,7 @@
 }
 
 .first_plan_span2 {
-    max-width: 244px;
+    max-width: 304px;
     width: 100%;
     font-size: 16px;
     font-weight: 400;

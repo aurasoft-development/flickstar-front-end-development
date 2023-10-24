@@ -49,7 +49,7 @@ const Login = () => {
         else {
             toast.success('Login Done')
             localStorage.setItem('user_login', 'true')
-            // dispatch(loginAuth('true'))
+            dispatch(loginAuth())
             navigate('/choose_plan');
         }
     }
