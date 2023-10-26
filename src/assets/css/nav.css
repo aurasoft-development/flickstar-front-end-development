@@ -181,23 +181,57 @@ select {
     .header_nav_main {
         display: none !important;
     }
+
+    .searchInput {
+        width: 80% !important;
+        position: absolute;
+        top: 100px;
+        color: white;
+        margin: auto !important;
+    }
 }
 
 @media(min-width:1200px) {
     .header-1200 {
         display: none !important;
     }
+
+
 }
 
 @media(max-width:550px) {
     .header-1200 {
         padding: 0%;
     }
+
+    /* 
+    .p-l {
+        padding-left: 10% !important;
+    }
+
+    .p-r {
+        padding-right: 10% !important;
+    } */
 }
 
 @media(max-width:320px) {
+    /* .p-l {
+        padding-left: 0% !important;
+    }
+
+    .p-r {
+        padding-right: 0% !important;
+    } */
+
     .header-1200 {
         padding: 0%;
+    }
+
+    .searchInput {
+        width: 80% !important;
+        position: absolute;
+        top: 100px;
+        color: white;
     }
 
     .header_nav_language {
@@ -215,4 +249,8 @@ select {
     .css-1gac5d9-MuiButtonBase-root-MuiIconButton-root {
         padding: 0% !important;
     }
+
+    /* .searchInput {
+        width: 80%;
+    } */
 }

@@ -7,6 +7,7 @@ import CardMedia from "@mui/material/CardMedia";
 import { CardActionArea } from "@mui/material";
 import '../../assets/css/Movies.css'
 import { useNavigate } from 'react-router-dom'
+import { useTranslation } from "react-i18next";
 
 
 const responsive = {
@@ -30,12 +31,13 @@ const responsive = {
 
 const WatchList = ({ heading, dynamicClass, images, dynamicHeight }) => {
     const navigate = useNavigate()
+    const { t } = useTranslation()
     return (
         <div className="menulist_container p-l">
             <div className="menulist_wrapper font-18 p-r">
                 <span>{heading}</span>
                 <div className="menu_div_heading">
-                    <span className="menu_color">sell all</span>
+                    <span className="menu_color">{t('WATCHLIST_SEE_ALL')}</span>
                     <KeyboardArrowRight />
                 </div>
             </div>
@@ -53,7 +55,7 @@ const WatchList = ({ heading, dynamicClass, images, dynamicHeight }) => {
                             <Card>
                                 <CardActionArea>
                                     <CardMedia
-                                        
+
                                         className={dynamicHeight}
                                         component="img"
                                         image={image}

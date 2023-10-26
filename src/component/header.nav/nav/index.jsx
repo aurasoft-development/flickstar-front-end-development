@@ -15,7 +15,9 @@ import icon_flickstar from '../../../assets/images/icon_flickstar.png'
 import AccountPopover from '../header/AccountPopover';
 //css
 import '../../../assets/css/side.nav.css'
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import ContentWrapper from '../../contentWrapper/ContentWrapper';
+import { loginAuth } from '../../../features/auth/LoginSlice';
 // ----------------------------------------------------------------------
 
 const NAV_WIDTH = 280;
@@ -37,14 +39,12 @@ Nav.propTypes = {
 
 export default function Nav({ openNav, onCloseNav }) {
   const [language, setLanguage] = useState('')
-  const [login, setLogin] = useState('')
+  const [mobileMenu, setMobileMenu] = useState(false);
+  const [showSearch, setShowSearch] = useState("");
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const data = useSelector((state) => state.login)
-  console.log("login redux ------>", data)
 
-  const handleChange = (event) => {
-    setLanguage(event.target.value);
-  };
   useEffect(() => {
     changeLang(language)
   }, [language])
@@ -64,10 +64,19 @@ export default function Nav({ openNav, onCloseNav }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // useEffect(() => {
-  //   const token = localStorage.getItem('user_login')
-  //   setLogin(token)
-  // }, []);
+  const openSearch = () => {
+    setMobileMenu(false);
+    setShowSearch(true);
+  };
+
+  const openMobileMenu = () => {
+    setMobileMenu(true);
+    setShowSearch(false);
+  };
+  useEffect(() => {
+    const token = localStorage.getItem('user_login')
+    dispatch(loginAuth(token))
+  }, []);
   const renderContent = (
     <Scrollbar
       sx={{
@@ -109,7 +118,7 @@ export default function Nav({ openNav, onCloseNav }) {
                 </div>
                 <li className='side_nav_sub cursor_pointer'>{t('SUBSCRIBE')}</li>
                 <div className='side_nav_icon cursor_pointer'>
-                  <div><SearchIcon /></div>
+                  <div><SearchIcon onClick={openSearch} /></div>
                   <div><NotificationsNoneIcon /></div>
                 </div>
               </div>
@@ -141,6 +150,24 @@ export default function Nav({ openNav, onCloseNav }) {
       >
         {renderContent}
       </Drawer>
+      {showSearch && (
+        <div className="searchBar">
+          <ContentWrapper>
+            <div className="searchInput">
+              <div className='input_search'>
+                <SearchIcon />
+                <input
+                  type="text"
+                  placeholder="Search for a Web Shows, Movie & Genre etc"
+                // onChange={(e) => setQuery(e.target.value)}
+                // onKeyUp={searchQueryHandler}
+                />
+              </div>
+              <span onClick={() => setShowSearch(false)}>Clear</span>
+            </div>
+          </ContentWrapper>
+        </div>
+      )}
     </Box>
   );
 }

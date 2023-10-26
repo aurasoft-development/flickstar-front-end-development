@@ -66,6 +66,9 @@
     "TV_PARENTAL_GUIDELINES": "टीवी अभिभावक दिशानिर्देश",
     "SITEMAP": "साइटमैप",
     "comment 7": "login page",
+
+    "PLEASE_FILL_THE_FIELDS":"कृपया फ़ील्ड भरें",
+    "LOGIN_DONE":"लॉगिन हो गया",
     "login_skip_button": "अभी के लिए छोड़ें",
     "LOGIN": "लॉगिन",
     "FEATURES_AND_BENEFITS": "फ़्लिकस्टार की विशिष्ट सुविधाओं और लाभों का आनंद लें।",
@@ -102,6 +105,8 @@
     "RESET_CONFIRM_PASSWORD": "पासवर्ड की पुष्टि करें",
     "RESET_BUTTON_CONTINUE": "जारी रखें",
     "comment 11": "otp",
+    "PLEASE_ENTER_OTP":"कृपया ओटीपी दर्ज करें",
+    "OPT_SUBMIT_SUCCESSFULLY":"ओटीपी सफलतापूर्वक सबमिट करें",
     "VERIFICATION_CODE": "सत्यापन कोड",
     "OTP_ENTER_CONNECTED_EMAIL": "वह ईमेल दर्ज करें जो आपके साथ जुड़ा हुआ है",
     "OTP_GET_STARTED": "आरंभ करें",
@@ -195,5 +200,45 @@
     "MOVIES_TIME_1": "1 घंटा 15 मिनट",
     "ACTION_1": "कार्रवाई",
     "SHOT_DOWN_OVER": "अफगानिस्तान में सबसे खतरनाक विद्रोहियों के गढ़ों में से एक में मार गिराए जाने पर, एक रॉयल एयर फोर्स पायलट को सुदूर पहाड़ियों में छिपी एक परित्यक्त सोवियत अनुसंधान सुविधा का पता चलता है। उसे एक भूमिगत बंकर में शरण मिलती है जहां घातक मानव निर्मित जैविक हथियार हैं",
-    "CONTINUE_WATCHING_1": "देखना जारी रखें"
+    "CONTINUE_WATCHING_1": "देखना जारी रखें",
+    "comment 19": "kids",
+    "WATCH_NEXT_KIDS": "अगला देखें बच्चों",
+    "KIDS_AND_FAMILY_MOVIES": "बच्चों और पारिवारिक फिल्में",
+    "ACTION_AND_ADVENTURE": "एक्शन और एडवेंचर टीवी और फिल्में",
+    "PRESCHOOL_KIDS_VIDEOS": "प्रीस्कूल बच्चों के वीडियो",
+    "comment_20": "kids_list",
+    "SEE_ALL": "सभी देखें",
+
+    "comment 21": "kids_list_slider",
+
+    "KIDS_2023": "2023",
+    "KIDS_12+": "12+",
+    "KIDS_TIME": "1 घंटा 15 मिनट",
+    "KIDS_ENTERTAINMENT": "मनोरंजन",
+    "KIDS_WATCH": "देखें",
+
+    "comment 22": "watch_page",
+    
+    "WATCHLIST_MOVIES":"देखने की सूची - फिल्में",
+    "WATCHLIST_TV":"देखने की सूची - टीवी",
+    "WATCHLIST_KIDS":"देखने की सूची - बच्चे",
+
+    "comment 23":"watch list",
+    "WATCHLIST_SEE_ALL":"सभी देखें",
+
+    "comment 24":"manage_profile",
+  
+    "WHO_WATCHING":"कौन देख रहा है?",
+    "ADD_NEW":"नया जोड़ें",
+    "MANAGE_PROFILE_BUTTON":"प्रोफ़ाइल प्रबंधित करें",
+
+    "comment 25":"edit_Manage_profile",
+    "DONE":"हो गया",
+
+    "comment 26":"profile edit",
+
+    "EDIT_PROFILE":"प्रोफ़ाइल संपादित करें",
+    "SAVE":"सहेजें",
+    "CENCEL":"रद्द करें",
+    "DELETE_PROFILE":"प्रोफ़ाइल हटाएं"
 }

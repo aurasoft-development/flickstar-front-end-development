@@ -44,10 +44,10 @@ const Login = () => {
     const handleSubmitData = () => {
         const { email_or_phone, password } = formValues;
         if (!email_or_phone || !password) {
-            toast.warn('Please fill the fields')
+            toast.warn(`${t('PLEASE_FILL_THE_FIELDS')}`)
         }
         else {
-            toast.success('Login Done')
+            toast.success(`${t('LOGIN_DONE')}`)
             localStorage.setItem('user_login', 'true')
             dispatch(loginAuth())
             navigate('/choose_plan');
@@ -58,7 +58,7 @@ const Login = () => {
         <div className='main'>
             <Container width='100%' >
                 <div className='wrapper'>
-                    <div className='skipBtn'>{t('login_skip_button')}</div>
+                    <div className='skipBtn cursor_pointer' onClick={() => navigate('/movies')} >{t('login_skip_button')}</div>
                     <div className='div_section_main' >
                         <h2 className='login_heading'>{t('LOGIN')}</h2>
                         <span className='login_plan_text'>{t('FEATURES_AND_BENEFITS')}</span>

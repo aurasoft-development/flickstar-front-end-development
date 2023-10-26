@@ -4,6 +4,7 @@ import Footer from '../component/Footer';
 import WatchList from '../component/watchlist/WatchList';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const images = [
     "https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
@@ -31,11 +32,12 @@ const Watch = () => {
         }, 300000);
         return () => clearTimeout(timer);
     }, []);
+    const {t} = useTranslation()
     return (
         <div className='flickstar_container pt-120'>
-            <WatchList heading={"Watchlist - Movies"} dynamicClass={"large_width"} dynamicHeight={'large_height'} images={images} />
-            <WatchList heading={"Watchlist - TV"} dynamicClass={"large_width"} dynamicHeight={'large_height'} images={images} />
-            <WatchList heading={"Watchlist - Kids"} dynamicClass={"large_width"} dynamicHeight={'large_height'} images={images} />
+            <WatchList heading={t('WATCHLIST_MOVIES')} dynamicClass={"large_width"} dynamicHeight={'large_height'} images={images} />
+            <WatchList heading={t('WATCHLIST_TV')} dynamicClass={"large_width"} dynamicHeight={'large_height'} images={images} />
+            <WatchList heading={t('WATCHLIST_KIDS')} dynamicClass={"large_width"} dynamicHeight={'large_height'} images={images} />
             <Footer />
         </div>
     )

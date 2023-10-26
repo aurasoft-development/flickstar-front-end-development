@@ -4,15 +4,17 @@ import '../../assets/css/Profile/ProfileEdit.css'
 import { useSelector } from 'react-redux'
 import EditIcon from '@mui/icons-material/Edit';
 import { useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next';
 
 const ProfileEdit = () => {
   const data = useSelector((state) => {
     return state.profile;
   })
   const navigate = useNavigate()
+  const { t } = useTranslation()
   return (
     <div className='profile_model_container'>
-      <h1>Edit Profile</h1>
+      <h1>{t('EDIT_PROFILE')}</h1>
       <div className='profile_div_main'>
         <div className='test edit'>
           <div className='icons'> <EditIcon fontSize='large' /> </div>
@@ -21,9 +23,9 @@ const ProfileEdit = () => {
         <input className='profile_input' type='text' color='white' defaultValue={data.name} />
       </div>
       <div className='profile_second_div'>
-        <span className='profile_button_save' onClick={() => navigate('/edit_manage_profile')}>Save</span>
-        <span className='profile_button_save' onClick={() => navigate('/edit_manage_profile')}>Cancel</span>
-        <span className='profile_button_save'>Delete Profile</span>
+        <span className='profile_button_save' onClick={() => navigate('/edit_manage_profile')}>{t('SAVE')}</span>
+        <span className='profile_button_save' onClick={() => navigate('/edit_manage_profile')}>{t('CENCEL')}</span>
+        <span className='profile_button_save'>{t('DELETE_PROFILE')}</span>
       </div>
     </div>
   )

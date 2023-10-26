@@ -66,6 +66,8 @@
     "TV_PARENTAL_GUIDELINES": "TV Parental Guidelines",
     "SITEMAP": "Sitemap",
     "comment 7": "login page",
+    "PLEASE_FILL_THE_FIELDS":"Please fill the fields",
+    "LOGIN_DONE":"Login Done",
     "login_skip_button": "Skip for now",
     "LOGIN": "login",
     "FEATURES_AND_BENEFITS": "Enjoy flickstar exclusive features and benefits.",
@@ -102,6 +104,8 @@
     "RESET_CONFIRM_PASSWORD": "Confirm Password",
     "RESET_BUTTON_CONTINUE": "Continue",
     "comment 11": "otp",
+    "PLEASE_ENTER_OTP":"Please Enter Otp",
+    "OPT_SUBMIT_SUCCESSFULLY":"Otp Submit successfully",
     "VERIFICATION_CODE": "Verification Code",
     "OTP_ENTER_CONNECTED_EMAIL": "input the email that is connected to your",
     "OTP_GET_STARTED": "Get Started",
@@ -198,7 +202,7 @@
     "BARNEY_ASSEMBLES":"Barney assembles a new and younger team to capture Stonebanks, a co-founder of the Expendables. However, Stonebanks ends up capturing the new team and challenges an escaped Barney to save them.",
     "WATCHS":"watch",
 
-    "commnet 18":"movies datails slider",
+    "comment 18":"movies datails slider",
 
     "THE_LAIR":"The Lair",
     "2023_1":"2023",
@@ -206,5 +210,50 @@
     "MOVIES_TIME_1":"1 hour 15min",
     "ACTION_1":"Action",
     "SHOT_DOWN_OVER":"Shot down over one of the most dangerous rebel strongholds in Afghanistan, a Royal Air Force pilot discovers an abandoned Soviet Research Facility concealed in the remote hills. She finds refuge in an underground bunker where deadly man-made biological weapons",
-    "CONTINUE_WATCHING_1":"Continue Watching"
+    "CONTINUE_WATCHING_1":"Continue Watching",
+
+    "comment_19":"kids",
+    "WATCH_NEXT_KIDS":"Watch next Kids",
+    "KIDS_AND_FAMILY_MOVIES":"Kids and family movies",
+    "ACTION_AND_ADVENTURE":"Action and adventure TV and movies",
+    "PRESCHOOL_KIDS_VIDEOS":"Preschool kids videos",
+
+    "comment_20":"kids_list",
+
+    "SEE_ALL":"see all",
+
+    "comment 21" :"kids_list_slider",
+
+    "KIDS_2023":"2023",
+    "KIDS_12+":"12+",
+    "KIDS_TIME":"1 hour 15min",
+    "KIDS_ENTERTAINMENT":"Entertainment",
+    "KIDS_WATCH":"watch",
+
+    "comment 22": "watch_page",
+
+    "WATCHLIST_MOVIES":"Watchlist - Movies",
+    "WATCHLIST_TV":"Watchlist - TV",
+    "WATCHLIST_KIDS":"Watchlist - Kids",
+
+    "comment 23":"watch list",
+    "WATCHLIST_SEE_ALL":"see all",
+
+    "comment 24":"manage_profile",
+  
+    "WHO_WATCHING":"Who's watching?",
+    "ADD_NEW":"Add New",
+    "MANAGE_PROFILE_BUTTON":"manage profile",
+     
+    "comment 25":"edit_Manage_profile",
+    "DONE":"Done",
+
+    "comment 26":"profile edit",
+
+    "EDIT_PROFILE":"Edit Profile",
+    "SAVE":"Save",
+    "CENCEL":"Cancel",
+    "DELETE_PROFILE":"Delete Profile"
+
+ 
 }

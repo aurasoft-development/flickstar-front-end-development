@@ -10,6 +10,7 @@ import '../../assets/css/Carousel.css'
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
+import { useTranslation } from 'react-i18next';
 
 const images = [
   {
@@ -39,6 +40,8 @@ const KidsListSlider = () => {
     autoplay: true,
     nav: true
   };
+
+  const { t } = useTranslation()
   return (
     <Box className="box_main ">
       <OwlCarousel className="owl-theme" {...options}>
@@ -47,15 +50,15 @@ const KidsListSlider = () => {
             <div className='carousel_div_main p-l wel_img '>
               <div className='carousel_kids'>  <img src={logo_image} width={229} height={142} /></div>
               <div className='carousel_span_main'>
-                <span className='carousel_span'>2023</span>
-                <span className='carousel_span back_color'>12+</span>
-                <span className='carousel_span b_left '>1 hour 15min</span>
-                <span className='carousel_span'>Entertainment</span>
+                <span className='carousel_span'>{t('KIDS_2023')}</span>
+                <span className='carousel_span back_color'>{t('KIDS_12')}</span>
+                <span className='carousel_span b_left '>{t('KIDS_TIME')}</span>
+                <span className='carousel_span'>{t('KIDS_ENTERTAINMENT')}</span>
               </div>
               <div className='carousel_div_botton custom_button_1 '>
                 <Button className='carousel_button'>
                   <img src={play} width={21} height={18} />
-                  <span>watch</span>
+                  <span>{t('KIDS_WATCH')}</span>
                 </Button>
                 <div className='carousel_icon_image' ><img src={plus} width={24} height={23} /> </div>
                 <div className='carousel_icon_image' ><img src={info} width={24} height={23} /> </div>

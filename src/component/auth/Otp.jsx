@@ -37,11 +37,11 @@ const Otp = () => {
     const handleSubmit = () => {
 
         if (otpValues && otpValues[0] === '' || otpValues[1] === '' || otpValues[2] === '' || otpValues[3] === '') {
-            toast.warn('Please Enter Otp')
+            toast.warn(`${t('PASSWORD_RESET_SUCCESSFULLY')}`)
 
         }
         else {
-            toast.success('Otp Submit successfully')
+            toast.success(`${t('RESET_PASSWORD')}`)
             navigate('/reset_password')
         }
     }

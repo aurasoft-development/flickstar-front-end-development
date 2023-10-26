@@ -10,6 +10,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { editProfile } from '../../features/profile/profile.slice'
+import { useTranslation } from 'react-i18next'
 const data = [
     {
         name: "boby",
@@ -31,11 +32,12 @@ const data = [
 const EditManageProfile = () => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
+    const { t } = useTranslation();
     return (
         <>
             <div className='manage_profile_main'>
                 <div className='manage_profile_sec_main'>
-                    <span className='manage_profile_title'>Who's watching?</span>
+                    <span className='manage_profile_title'>{t('WHO_WATCHING')}</span>
                     <div className='manage_profile_sec_first'>
                         <div className='m_p_div_main'>
                             {data.map((value, index) => (
@@ -57,11 +59,11 @@ const EditManageProfile = () => {
                             }
                             <div className='m_p_div_second'>
                                 <img className='m_p_second_img' src={plus} width={45.48} height={43.58} />
-                                <span className='m_p_second_span'>Add New</span>
+                                <span className='m_p_second_span'>{t('ADD_NEW')}</span>
                             </div>
                         </div>
                     </div>
-                    <span className='m_p_second_done cursor_pointer' onClick={() => navigate('/manage_profile')}>Done</span>
+                    <span className='m_p_second_done cursor_pointer' onClick={() => navigate('/manage_profile')}>{t('DONE')}</span>
                 </div>
             </div>
             <Footer />

@@ -38,7 +38,7 @@ const Register = () => {
         <div className='main'>
             <Container width='100%'>
                 <div className='wrapper'>
-                    <div className='skipBtn' onClick={() => navigate('/movies')}>{t('SKIP_FOR_NOW')}</div>
+                    <div className='skipBtn cursor_pointer' onClick={() => navigate('/movies')}>{t('SKIP_FOR_NOW')}</div>
                     <div className='div_section_main' >
                         <h2 className='login_heading'>{t('REGISTER')}</h2>
                         <span className='login_plan_text'>{t('FLICKSTAR_FEATURES_BENEFITS')}</span>
