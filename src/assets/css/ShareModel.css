@@ -1,0 +1,70 @@
+.share_model_main_box {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.share_model_social_icon {
+    display: flex;
+    gap: 30px;
+}
+
+.share_model_copy_link {
+    background: var(--gradient);
+    width: 80px;
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    font-family: var(--font_family);
+}
+
+.css-2ulfj5-MuiTypography-root {
+    font-size: 25px !important;
+    font-weight: 600 !important;
+    color: white !important;
+    font-family: var(--font_family) !important;
+}
+
+.fb .css-tzssek-MuiSvgIcon-root {
+    background: blue;
+    border-radius: 50%;
+    color: white;
+    padding: 10px;
+    height: auto;
+}
+
+.tw .css-tzssek-MuiSvgIcon-root {
+    background: #1da1f2;
+    border-radius: 50%;
+    color: white;
+    padding: 10px;
+    height: auto;
+}
+
+.email .css-tzssek-MuiSvgIcon-root {
+    background: #888;
+    border-radius: 50%;
+    color: white;
+    padding: 10px;
+    height: auto;
+}
+
+.whatsapp .css-tzssek-MuiSvgIcon-root {
+    background: #25d366;
+    border-radius: 50%;
+    color: white;
+    padding: 10px;
+    height: auto;
+}
+
+.share_close_main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.share_model_close_icon {
+    align-self: center !important;
+    font-weight: 600 !important;
+}

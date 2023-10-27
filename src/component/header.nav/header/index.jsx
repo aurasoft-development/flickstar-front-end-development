@@ -226,7 +226,7 @@ export default function Header({ onOpenNav }) {
                 // onKeyUp={searchQueryHandler}
                 />
               </div>
-              <span onClick={() => setShowSearch(false)}>Clear</span>
+              <span className='cursor_pointer' onClick={() => setShowSearch(false)}>Clear</span>
             </div>
           </ContentWrapper>
         </div>

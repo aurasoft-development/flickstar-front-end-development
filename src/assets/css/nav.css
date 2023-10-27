@@ -138,6 +138,10 @@ select {
     align-items: center;
 }
 
+.input_search input {
+    width: 270px !important;
+}
+
 .input_search {
     display: flex;
     gap: 20px;
@@ -185,6 +189,7 @@ select {
     .searchInput {
         width: 80% !important;
         position: absolute;
+        left: 5%;
         top: 100px;
         color: white;
         margin: auto !important;

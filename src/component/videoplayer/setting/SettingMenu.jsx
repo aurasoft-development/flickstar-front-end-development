@@ -7,6 +7,8 @@ import { useNavigate } from 'react-router-dom';
 import SettingsIcon from '@mui/icons-material/Settings';
 import LanguageSelector from './LanguageSelector';
 import PlayRate from './PlayRate';
+import '../../../assets/css/Setting/Setting.css'
+import VideoQuality from './VideoQuality';
 // import logout from '../../../assets/images/logout.png'
 // css
 // import '../../../assets/css/AccontPopver.css'
@@ -73,6 +75,9 @@ export default function SettingMenu() {
                         </Typography>
                         <Typography variant="subtitle2" noWrap>
                             <PlayRate />
+                        </Typography>
+                        <Typography variant="subtitle2" noWrap>
+                            <VideoQuality />
                         </Typography>
                     </div>
 

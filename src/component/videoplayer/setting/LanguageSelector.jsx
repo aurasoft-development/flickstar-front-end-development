@@ -5,6 +5,7 @@ import { setLanguage } from '../../../features/video-player/videoSlice';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import '../../../assets/css/Setting/LanguageSellector.css'
 
 export default function BasicMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);

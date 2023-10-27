@@ -28,6 +28,8 @@ import SettingMenu from './setting/SettingMenu';
 import { setVideoUrl } from '../../features/video-player/videoSlice';
 import movies_poster from '../../assets/images/kids/kids_slider.png'
 import { addRange } from '../../features/movies/AddRange';
+import ShareModel from '../model/ShareModel';
+import DownloadMenu from './DownloadMenu';
 
 const VideoPlayer = ({ show, setShow }) => {
     const [playing, setPlaying] = useState(false);
@@ -178,13 +180,13 @@ const VideoPlayer = ({ show, setShow }) => {
     // multi audio
 
     //video quality 
-    const videoQualities = [
-        { label: 'SD', value: english_video },
-        { label: 'HD', value: video_medium },
-        { label: 'FHD', value: english_video },
-        // Add more quality options as needed
-    ];
- 
+    // const videoQualities = [
+    //     { label: 'SD', value: english_video },
+    //     { label: 'HD', value: video_medium },
+    //     { label: 'FHD', value: english_video },
+    //     // Add more quality options as needed
+    // ];
+
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
@@ -213,10 +215,9 @@ const VideoPlayer = ({ show, setShow }) => {
 
                         <div className='setting_icon'>
                             <div>
-                                {/* <SettingsIcon /> */}
                                 <SettingMenu />
                             </div>
-                            <div> <ScreenShareIcon /></div>
+                            <div> <ShareModel videoUrl={videoUrl} /></div>
                             <div onClick={() => { setPlaying(false); hidePopup(); countinueWatching() }}> < CloseIcon /> </div>
                         </div>
 
@@ -317,57 +318,12 @@ const VideoPlayer = ({ show, setShow }) => {
                             <div onClick={() => setSubtitlesEnabled(!subtitlesEnabled)}>
                                 {subtitlesEnabled ? <ClosedCaptionOffIcon fontSize='large' /> : <ClosedCaptionOffIcon fontSize='large' />}
                             </div>
-
-                            <div>
-                                <div color='white' id="basic-button"
-                                    aria-controls={open ? 'basic-menu' : undefined}
-                                    aria-haspopup="true"
-                                    aria-expanded={open ? 'true' : undefined}
-                                    onClick={handleClick}> <HdIcon fontSize='large' /> {selectedQuality} </div>
-                                {/* <select
-                                    value={selectedQuality || ''}
-                                    onChange={(e) => handleQualityChange(e.target.value)}
-                                >
-                                    <div value="" disabled>
-                                        <HdIcon fontSize='large' />
-                                    </div>
-                                    {videoQualities.map((qualityOption, index) => (
-                                        <option key={index} value={qualityOption.value}>
-                                            {qualityOption.label}
-                                        </option>
-                                    ))}
-                                </select> */}
-
-                                {/* // <option key={index} value={qualityOption.value}>
-                                    //     {qualityOption.label}
-                                    // </option> */}
-
-                                <Menu
-                                    id="basic-menu"
-                                    anchorEl={anchorEl}
-                                    open={open}
-                                    onClose={handleClose}
-                                    MenuListProps={{
-                                        'aria-labelledby': 'basic-button',
-                                    }}
-                                    value={selectedQuality || ''}
-                                    onChange={(e) => handleQualityChange(e.target.value)}
-                                >
-                                    {videoQualities.map((qualityOption, index) => (
-                                        <MenuItem
-                                            key={index} value={qualityOption.value}
-                                            onClick={handleClose}>
-                                            {qualityOption.label}
-                                        </MenuItem>
-                                    ))}
-                                </Menu>
-                            </div>
-
                             <div className="custom-controls">
                                 <div onClick={toggleFullScreen}>
                                     {isFullScreen ? <FullscreenExitIcon fontSize='large' /> : <FullscreenIcon fontSize='large' />}
                                 </div>
                             </div>
+                            <div><DownloadMenu /></div>
                         </div>
                     </div>
                 </div>

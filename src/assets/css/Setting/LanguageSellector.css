@@ -1,0 +1,7 @@
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
+    /* color: white !important; */
+    text-transform: capitalize !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    font-family: var(--font_family) !important;
+}
