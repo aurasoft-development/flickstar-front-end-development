@@ -105,6 +105,15 @@
 
 }
 
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-pre {
+    background: none !important;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+    background: none !important;
+}
+
 @media (max-width: 868px) {
     .carousel_img {
         display: flex;

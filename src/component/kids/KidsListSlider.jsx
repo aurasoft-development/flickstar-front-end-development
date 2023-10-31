@@ -51,7 +51,7 @@ const KidsListSlider = () => {
               <div className='carousel_kids'>  <img src={logo_image} width={229} height={142} /></div>
               <div className='carousel_span_main'>
                 <span className='carousel_span'>{t('KIDS_2023')}</span>
-                <span className='carousel_span back_color'>{t('KIDS_12')}</span>
+                <span className='carousel_span back_color'>{t('KIDS_12+')}</span>
                 <span className='carousel_span b_left '>{t('KIDS_TIME')}</span>
                 <span className='carousel_span'>{t('KIDS_ENTERTAINMENT')}</span>
               </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import plus from '../../assets/images/manage_profile/plus.png'
+// import plus from '../../assets/images/manage_profile/plus.png'
 import Group from '../../assets/images/manage_profile/Group.png'
 import Group1 from '../../assets/images/manage_profile/Group1.png'
 import Group2 from '../../assets/images/manage_profile/Group2.png'
@@ -11,6 +11,7 @@ import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { editProfile } from '../../features/profile/profile.slice'
 import { useTranslation } from 'react-i18next'
+import AddProfileModel from './AddProfileModel'
 const data = [
     {
         name: "boby",
@@ -58,7 +59,8 @@ const EditManageProfile = () => {
                             ))
                             }
                             <div className='m_p_div_second'>
-                                <img className='m_p_second_img' src={plus} width={45.48} height={43.58} />
+                                {/* <img className='m_p_second_img' src={plus} width={45.48} height={43.58} /> */}
+                                <AddProfileModel />
                                 <span className='m_p_second_span'>{t('ADD_NEW')}</span>
                             </div>
                         </div>

@@ -46,7 +46,7 @@ const MoviesList = ({ heading, dynamicClass, images, dynamicHeight }) => {
                 partialVisbile
                 itemClass="image-item"
                 responsive={responsive}
-                infinite={true}
+                // infinite={true}
                 className={`${dynamicClass} card`}
             >
                 {images.map((image, index) => {

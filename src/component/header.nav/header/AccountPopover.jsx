@@ -20,6 +20,7 @@ export default function AccountPopover() {
   const [open, setOpen] = useState(null);
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const [activeTab, setActiveTab] = useState(1);
   const handleOpen = (event) => {
     setOpen(event.currentTarget);
   };
@@ -34,6 +35,12 @@ export default function AccountPopover() {
   };
 
   const { t } = useTranslation();
+
+  //active tab functionality function
+  const handleTabClick = (tabNumber) => {
+    setActiveTab(tabNumber);
+  };
+
   return (
     <>
       <IconButton
@@ -78,35 +85,41 @@ export default function AccountPopover() {
         <Box sx={{ my: 1.5, px: 2.5 }} display={'flex'} flexDirection={'column'} gap={1}>
 
           <div className='account_p_div_main cursor_pointer'> <Avatar src='https://imgv3.fotor.com/images/gallery/Realistic-Male-Profile-Picture.jpg' height={50} width={50} />
-            <Typography variant="subtitle2" noWrap>
+            <Typography variant="subtitle2" noWrap className={`tab1 ${activeTab === 1 ? 'active' : ''}`}
+              onClick={() => handleTabClick(1)}>
               {t('ERIK')}
             </Typography>
           </div>
           <div className='account_p_div_main cursor_pointer'> <Avatar src='' height={50} width={50} />
-            <Typography variant="subtitle2" noWrap>
+            <Typography variant="subtitle2" noWrap className={`tab1 ${activeTab === 2 ? 'active' : ''}`}
+              onClick={() => handleTabClick(2)}>
               {t('DORTA')}
             </Typography>
           </div>
           <div className='account_p_div_main cursor_pointer'> <Avatar src='' height={50} width={50} />
-            <Typography variant="subtitle2" noWrap>
+            <Typography variant="subtitle2" noWrap className={`tab1 ${activeTab === 3 ? 'active' : ''}`}
+              onClick={() => handleTabClick(3)}>
               {t('DORTA')}
             </Typography>
           </div>
           <div className='account_p_div_main cursor_pointer'>
             <ManageAccountsIcon fontSize='large' />
-            <Typography variant="subtitle2" noWrap>
+            <Typography variant="subtitle2" noWrap className={`tab1 ${activeTab === 4 ? 'active' : ''}`}
+              onClick={() => handleTabClick(4)}>
               {t('MY_ACCOUNT')}
             </Typography>
           </div>
           <div className='account_p_div_main cursor_pointer'>
             <AddIcon fontSize='large' />
-            <Typography variant="subtitle2" noWrap onClick={() => navigate('/watch')}>
+            <Typography variant="subtitle2" noWrap className={`tab1 ${activeTab === 5 ? 'active' : ''}`}
+              onClick={() => { handleTabClick(5); navigate('/watch') }}>
               {t('WATCH_LIST')}
             </Typography>
           </div>
           <div className='account_p_div_main cursor_pointer'>
             <AddIcon fontSize='large' />
-            <Typography variant="subtitle2" noWrap onClick={() => navigate('/manage_profile')}>
+            <Typography variant="subtitle2" noWrap className={`tab1 ${activeTab === 6 ? 'active' : ''}`}
+              onClick={() => { handleTabClick(6); navigate('/manage_profile') }}>
               {t('MANAGE_PROFILE')}
             </Typography>
           </div>
@@ -116,7 +129,8 @@ export default function AccountPopover() {
         <div className='cursor_pointer account_p_logout'>
           {/* <LogoutRoundedIcon /> */}
           <img src={logout} width={20} height={20} />
-          <Typography variant="subtitle2" noWrap onClick={() => { localStorage.removeItem('user_login'); navigate('/login'); dispatch(loginAuth('false')) }} >
+          <Typography variant="subtitle2" noWrap className={`tab1 ${activeTab === 7 ? 'active' : ''}`}
+            onClick={() => { localStorage.removeItem('user_login'); navigate('/login'); dispatch(loginAuth('false')); handleTabClick(7) }} >
             {t('LOGOUT')}
           </Typography>
         </div>

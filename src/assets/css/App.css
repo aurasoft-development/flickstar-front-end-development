@@ -91,4 +91,9 @@ select {
     background: var(--black);
 }
 
+.cursor_pointer_nover:hover {
+    cursor: pointer;
+    color: rgb(226, 65, 7);
+}
+
 /* video player css test */

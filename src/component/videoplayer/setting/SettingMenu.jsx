@@ -17,6 +17,8 @@ import VideoQuality from './VideoQuality';
 
 export default function SettingMenu() {
     const [open, setOpen] = useState(null);
+    const [activeTab, setActiveTab] = useState(1);
+
     const navigate = useNavigate();
     const handleOpen = (event) => {
         setOpen(event.currentTarget);
@@ -24,6 +26,10 @@ export default function SettingMenu() {
 
     const handleClose = () => {
         setOpen(null);
+    };
+
+    const handleTabClick = (tabNumber) => {
+        setActiveTab(tabNumber);
     };
 
     return (
@@ -70,13 +76,16 @@ export default function SettingMenu() {
                 <Box sx={{ my: 1.5, px: 2.5 }} display={'flex'} flexDirection={'column'} gap={1}>
 
                     <div className=' cursor_pointer '>
-                        <Typography variant="subtitle2" noWrap>
+                        <Typography variant="subtitle2" className={`tab ${activeTab === 1 ? 'active' : ''}`}
+                            onClick={() => handleTabClick(1)} noWrap>
                             <LanguageSelector />
                         </Typography>
-                        <Typography variant="subtitle2" noWrap>
+                        <Typography variant="subtitle2" className={`tab ${activeTab === 2 ? 'active' : ''}`}
+                            onClick={() => handleTabClick(2)} noWrap>
                             <PlayRate />
                         </Typography>
-                        <Typography variant="subtitle2" noWrap>
+                        <Typography variant="subtitle2" className={`tab ${activeTab === 3 ? 'active' : ''}`}
+                            onClick={() => handleTabClick(3)} noWrap>
                             <VideoQuality />
                         </Typography>
                     </div>

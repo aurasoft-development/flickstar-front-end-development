@@ -104,12 +104,12 @@ const Login = () => {
                         </form>
                         <div className='form_div_main login_form_sec'>
                             <span className='social_text'>{t('SIGN_IN_SOCIAL_ACCOUNT')}</span>
-                            <div className='social_media' >
-                                <div className='social_media_login'>
+                            <div className='social_media ' >
+                                <div className='social_media_login cursor_pointer'>
                                     <img src={Google} width={36} height={36} backgroundColor={"#818181"} />
                                     <span>{t('CONTINUE_WITH_GOOGLE')}</span>
                                 </div>
-                                <div className='social_media_login' >
+                                <div className='social_media_login cursor_pointer' >
                                     <img src={Facebook} width={36} height={36} />
                                     <span>{t('CONTINUE_WITH_FACEBOOK')}</span>
                                 </div>

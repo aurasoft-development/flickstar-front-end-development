@@ -37,7 +37,12 @@ const View = () => {
                         <Button className='carousel_button'>
                             <img src={play} width={21} height={18} />
                             <div className='countinue_range'>
-                                <span onClick={() => setShow(true)}>{t('CONTINUE_WATCHING_1')}</span>
+                                <span onClick={() => {
+                                    setShow(true);
+                                    // navigate('/video_player')
+                                }
+                                }
+                                >{t('CONTINUE_WATCHING_1')}</span>
                                 <input type='range' min={0} max={1} step="any"
                                     value={data[0] > 0 ? data[0] : 0}
                                 />
@@ -52,14 +57,14 @@ const View = () => {
                 <div className='flickstar_details_div_img' >
                     <img src={slider} width={'100%'} height={'100%'} />
                 </div>
-            </div>
+            </div >
             <VideoPlayer
                 show={show}
                 setShow={setShow}
             // videoUrl={video}
             // subtitles={"hello"}
             />
-        </div>
+        </div >
     )
 }
 

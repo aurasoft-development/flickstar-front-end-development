@@ -5,3 +5,10 @@
     font-weight: 600 !important;
     font-family: var(--font_family) !important;
 }
+
+/* Apply a different background color to the active tab */
+.tab.active {
+    background: var(--gradient) !important;
+    border-radius: 8px;
+    /* Change the background color to your desired active color */
+}

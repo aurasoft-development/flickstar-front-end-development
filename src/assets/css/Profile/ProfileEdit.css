@@ -42,6 +42,43 @@
     gap: 40px;
 }
 
+.p_parent {
+    margin: auto;
+    background: #ffffff;
+    border-radius: 8px;
+    width: 150px;
+    height: 150px;
+}
+
+.p_file-upload {
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.p_file-upload p {
+    font-size: 0.87rem;
+    margin-top: 10px;
+    color: #bbcada;
+}
+
+.p_file-upload input {
+    display: block;
+    height: 110px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.p_file-upload img {
+    border-radius: 8px;
+}
+
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<---------------------------Responsive css--------------------------------->>>>>>>>>>>>>>>>>>>>>>> */
 
 @media(max-width:320px) {

@@ -1,0 +1,24 @@
+a:-webkit-any-link {
+    color: black !important;
+    text-decoration: none !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    font-family: var(--font_family);
+    padding: 10px;
+
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.download_btn {
+    font-size: 15px;
+    font-weight: 600;
+    background: var(--gradient);
+    font-family: var(--font_family);
+    color: white;
+    border-radius: 8px;
+    border: 1px saddlebrown;
+    padding: 5px;
+}

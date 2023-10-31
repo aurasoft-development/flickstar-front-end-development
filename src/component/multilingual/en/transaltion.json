@@ -253,7 +253,14 @@
     "EDIT_PROFILE":"Edit Profile",
     "SAVE":"Save",
     "CENCEL":"Cancel",
-    "DELETE_PROFILE":"Delete Profile"
+    "DELETE_PROFILE":"Delete Profile",
+
+    "comment 27":"Add_Profile_Model",
+    
+    "ADD_NEW_PROFILE":"Add New Profile",
+    "CLICK_BOX_TO_UPLOAD":"Click box to upload",
+    "ENTER_YOUR_NAME":"Enter your name",
+    "ADD_PROFILE":"Add Profile"
 
  
 }

@@ -1,0 +1,112 @@
+.parent {
+    margin: auto;
+    padding: 0 2rem 2rem 2rem;
+    background: #ffffff;
+    border-radius: 25px;
+    width: 80px;
+    height: 80px;
+}
+
+.file-upload-image {
+    width: 130px;
+    height: 110px;
+    /* border: 1px solid red; */
+    border-radius: 25px;
+    background: white;
+}
+
+.file-upload-image img {
+    border-radius: 25px;
+}
+
+.file-upload {
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.file-upload p {
+    font-size: 0.87rem;
+    margin-top: 10px;
+    color: #bbcada;
+}
+
+.file-upload input {
+    display: block;
+    height: 110px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.box,
+.css-2ulfj5-MuiTypography-root {
+    text-align: center;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input_box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.box_place input {
+    font-size: 19px;
+    background: tomato !important;
+    padding: 20px;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+.add_profile_model_btn .css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+    background: var(--gradient);
+    padding: 15px !important;
+    font-size: 15px !important;
+    width: 292px;
+    border-radius: 8px;
+}
+
+.file-upload-main {
+    display: flex;
+    gap: 20px;
+}
+
+.close_icon {
+    color: white;
+    position: absolute;
+    right: 2%;
+    top: 2%;
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<------------------------------------responsive design------------------------------------------>>>>>>>>>>>>>>>>>>>>>>>>>>/ */
+
+@media(max-width:426px) {
+    .css-1fi4fzq {
+        width: 300px !important;
+    }
+}
+
+@media(max-width:326px) {
+    .css-1fi4fzq {
+        width: 240px !important;
+    }
+
+    .add_profile_model_btn .css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+        position: relative;
+        left: -25px;
+
+    }
+}

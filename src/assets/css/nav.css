@@ -9,6 +9,12 @@
     width: 100% !important;
 } */
 
+.tab1.active {
+    /* color: var(--gradient) !important; */
+    color: rgb(227, 93, 9);
+    /* Change the background color to your desired active color */
+}
+
 .header_nav_item {
     display: flex !important;
     align-items: center !important;

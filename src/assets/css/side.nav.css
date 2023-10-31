@@ -20,3 +20,7 @@
     margin-top: 10px;
     gap: 25px;
 }
+
+.css-o8knuy-MuiPaper-root-MuiDrawer-paper {
+    background-color: #0f0f0f!important;
+}

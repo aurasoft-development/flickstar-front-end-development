@@ -11,17 +11,13 @@ import VolumeOffIcon from '@mui/icons-material/VolumeOff';
 import Brightness5Icon from '@mui/icons-material/Brightness5';
 import FullscreenIcon from '@mui/icons-material/Fullscreen';
 import FullscreenExitIcon from '@mui/icons-material/FullscreenExit';
-import HdIcon from '@mui/icons-material/Hd';
 import ClosedCaptionOffIcon from '@mui/icons-material/ClosedCaptionOff';
 import CloseIcon from '@mui/icons-material/Close';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import SensorsIcon from '@mui/icons-material/Sensors';
-import SettingsIcon from '@mui/icons-material/Settings';
-import ScreenShareIcon from '@mui/icons-material/ScreenShare';
 import '../../assets/css/VideoPlayer.css'
 import english_video from '../../assets/video/english_video.mp4'
 import video_medium from '../../assets/video/video_medium.mp4'
-import { Menu, MenuItem } from '@mui/material';
 import { useDispatch, useSelector } from "react-redux";
 // import { addRange } from '../../features/movies/movies.details';
 import SettingMenu from './setting/SettingMenu';
@@ -41,10 +37,7 @@ const VideoPlayer = ({ show, setShow }) => {
     const [brightness, setBrightness] = useState(1);
     const [selectedQuality, setSelectedQuality] = useState(null);
     const [played, setPlayed] = useState(0);
-    const [display, setdisplay] = useState(true);
-    const [anchorEl, setAnchorEl] = React.useState(null);
     const [subtitlesEnabled, setSubtitlesEnabled] = useState(true);
-    const prevPlayed = useRef(null);
     const [isFullScreen, setIsFullScreen] = useState(false);
     const [isSeeking, setIsSeeking] = useState(false);
     const videoUrl = useSelector((state) => state.video.url);
@@ -176,31 +169,6 @@ const VideoPlayer = ({ show, setShow }) => {
             }
         }
     };
-
-    // multi audio
-
-    //video quality 
-    // const videoQualities = [
-    //     { label: 'SD', value: english_video },
-    //     { label: 'HD', value: video_medium },
-    //     { label: 'FHD', value: english_video },
-    //     // Add more quality options as needed
-    // ];
-
-    const open = Boolean(anchorEl);
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
-
-    const handleQualityChange = (qualityValue) => {
-        setSelectedQuality(qualityValue);
-        playerRef.current.seekTo(0); // Restart video when quality changes
-    };
-
-
     return (
         <div className={`videoPopup ${show ? "visible" : ""}`}>
             <div className="opacityLayer" ></div>
@@ -323,7 +291,7 @@ const VideoPlayer = ({ show, setShow }) => {
                                     {isFullScreen ? <FullscreenExitIcon fontSize='large' /> : <FullscreenIcon fontSize='large' />}
                                 </div>
                             </div>
-                            <div><DownloadMenu /></div>
+                            <div className='video_player_downlod_menu'><DownloadMenu /></div>
                         </div>
                     </div>
                 </div>

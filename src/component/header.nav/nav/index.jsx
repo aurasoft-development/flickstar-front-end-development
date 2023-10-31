@@ -41,9 +41,16 @@ export default function Nav({ openNav, onCloseNav }) {
   const [language, setLanguage] = useState('')
   const [mobileMenu, setMobileMenu] = useState(false);
   const [showSearch, setShowSearch] = useState("");
+  const [activeTab, setActiveTab] = useState(1);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const data = useSelector((state) => state.login)
+
+  //active tab functionality function
+  const handleTabClick = (tabNumber) => {
+    setActiveTab(tabNumber);
+  };
+
 
   useEffect(() => {
     changeLang(language)
@@ -106,20 +113,28 @@ export default function Nav({ openNav, onCloseNav }) {
         <Stack >
           <div className='sidenav_sec_div'>
             <ul className='side_nav_ul cursor_pointer'>
-              <li onClick={() => navigate('/movies')}>{t('MOVIES')}</li>
-              <li>{t('TV_SHOWS')}</li>
-              <li>{t('WEB_SERIES')}</li>
-              <li onClick={() => navigate('/kids')}>{t('KIDS')}</li>
+              <li className={`tab1 ${activeTab === 2 ? 'active' : ''}`}
+                onClick={() => { navigate('/movies'); handleTabClick(2) }}>{t('MOVIES')}</li>
+              <li className={`tab1 ${activeTab === 3 ? 'active' : ''}`}
+                onClick={() => handleTabClick(3)} >{t('TV_SHOWS')}</li>
+              <li className={`tab1 ${activeTab === 4 ? 'active' : ''}`}
+                onClick={() => handleTabClick(4)} >{t('WEB_SERIES')}</li>
+              <li className={`tab1 ${activeTab === 5 ? 'active' : ''}`}
+                onClick={() => { navigate('/kids'); handleTabClick(5) }}>{t('KIDS')}</li>
 
               <div className='sidenav_live_div cursor_pointer'>
                 <div className='lives_div'>
                   <p className='lives_p'>{t('LIVE')}</p>
-                  <span>{t('STREAMING')}</span>
+                  <span className={`tab1 ${activeTab === 6 ? 'active' : ''}`}
+                    onClick={() => handleTabClick(6)} >{t('STREAMING')}</span>
                 </div>
-                <li className='side_nav_sub cursor_pointer'>{t('SUBSCRIBE')}</li>
+                <li className={`tab1 ${activeTab === 7 ? 'active' : ''} side_nav_sub cursor_pointer `}
+                  onClick={() => handleTabClick(7)} >{t('SUBSCRIBE')}</li>
                 <div className='side_nav_icon cursor_pointer'>
-                  <div><SearchIcon onClick={openSearch} /></div>
-                  <div><NotificationsNoneIcon /></div>
+                  <div className={`tab1 ${activeTab === 8 ? 'active' : ''}`}
+                    onClick={() => handleTabClick(8)} ><SearchIcon onClick={openSearch} /></div>
+                  <div className={`tab1 ${activeTab === 9 ? 'active' : ''}`}
+                    onClick={() => handleTabClick(9)} ><NotificationsNoneIcon /></div>
                 </div>
               </div>
             </ul>

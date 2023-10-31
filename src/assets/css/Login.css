@@ -194,7 +194,7 @@ Input {
     }
 }
 
-@media(max-width:425px) {
+@media(max-width:426px) {
     .login_forget {
         right: 14%;
         margin-top: 15px;
@@ -212,7 +212,9 @@ Input {
     .social_media {
         display: flex;
         flex-direction: column;
+        gap: 10px;
     }
+
 
     .div_section_main {
         gap: 5px !important;

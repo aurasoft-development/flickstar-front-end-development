@@ -17,6 +17,7 @@ import ManageProfile from '../component/profile/ManageProfile';
 import EditManageProfile from '../component/profile/EditManageProfile';
 import ProfileEdit from '../component/profile/ProfileEdit';
 import Watch from '../pages/Watch';
+import VideoPlayer from '../component/videoplayer/VideoPlayer';
 
 const AllRoutes = () => {
     return (
@@ -39,6 +40,8 @@ const AllRoutes = () => {
                     <Route path='/edit_manage_profile' element={<EditManageProfile />} />
                     <Route path='/profile_edit' element={<ProfileEdit />} />
                     <Route path='/watch' element={<Watch />} />
+                    <Route path='/video_player' element={<VideoPlayer />} />
+
                 </Routes>
             </MainLayout>
         </>

@@ -12,11 +12,11 @@ import { useTranslation } from 'react-i18next'
 const Footer = () => {
   const { t } = useTranslation();
   return (
-    <div className='footer_section'>
+    <div className='footer_section '>
       <div className='footer_sec_main'>
-        <span className='footer_text'>{t('INPUT_YOUR_EMAIL')}</span>
+        <span className='footer_text cursor_pointer_nover'>{t('INPUT_YOUR_EMAIL')}</span>
         <Input
-          className='footer_input'
+          className='footer_input '
           placeholder='email address'
           name='confirm_password'
           endAdornment={
@@ -30,35 +30,35 @@ const Footer = () => {
       <div className='footer_color footer_d_row p-r p-l'>
         <div className='footer_d_flex footer_div_main footer_div_span'>
           <h2 className='footer_div_h2'>{t('COMPANY')}</h2>
-          <span>{t('ABOUT_US')}</span>
-          <span>{t('CORPORATE')}</span>
-          <span>{t('INVESTOR_RELATIONS')}</span>
-          <span className='footer_div_span'>{t('FLICKSTAR_BLOG')}</span>
+          <span className='cursor_pointer_nover'>{t('ABOUT_US')}</span>
+          <span className='cursor_pointer_nover'>{t('CORPORATE')}</span>
+          <span className='cursor_pointer_nover'>{t('INVESTOR_RELATIONS')}</span>
+          <span className='footer_div_span cursor_pointer_nover'>{t('FLICKSTAR_BLOG')}</span>
         </div>
         <div className='footer_d_flex footer_div_sec footer_position2 footer_div_span'>
           <h2 className='footer_div_h2'>{t('CUSTOMER')}</h2>
-          <span >{t('FAQ')}</span>
-          <span >{t('MEDIA_CENTRE')}</span>
-          <span >{t('WAYS_TO_WATCH')}</span>
+          <span className='cursor_pointer_nover' >{t('FAQ')}</span>
+          <span className='cursor_pointer_nover'>{t('MEDIA_CENTRE')}</span>
+          <span className='cursor_pointer_nover'>{t('WAYS_TO_WATCH')}</span>
         </div>
         <div className='footer_d_flex footer_position3 footer_div_span'>
           <h2 className='footer_div_h2'>{t('CONNECT')}</h2>
-          <span>{t('CONTACT_US')}</span>
-          <span>{t('CAREERS')}</span>
+          <span className='cursor_pointer_nover'>{t('CONTACT_US')}</span>
+          <span className='cursor_pointer_nover'>{t('CAREERS')}</span>
         </div>
         <div className='footer_d_flex footer_position4 footer_div_span'>
           <h2 className='footer_div_h2'>{t('TOP_FLICKSTAR_SHOWS')}</h2>
-          <span >{t('THE_WITCHER')}</span>
-          <span >{t('SECRET_INVASION(TV-14)')}</span>
-          <span >{t('HIJACK_(TV-MA)')}</span>
-          <span >{t('THE_LAST_OF_US_(TV-MA)')}</span>
-          <span >{t('THE_BLACKLIST_SEASON_10')}</span>
-          <span >{t('THE_CROWDED_ROOM')}</span>
-          <span >{t('TWISTED_METAL')}</span>
+          <span className='cursor_pointer_nover'>{t('THE_WITCHER')}</span>
+          <span className='cursor_pointer_nover'>{t('SECRET_INVASION(TV-14)')}</span>
+          <span className='cursor_pointer_nover'>{t('HIJACK_(TV-MA)')}</span>
+          <span className='cursor_pointer_nover'>{t('THE_LAST_OF_US_(TV-MA)')}</span>
+          <span className='cursor_pointer_nover'>{t('THE_BLACKLIST_SEASON_10')}</span>
+          <span className='cursor_pointer_nover'>{t('THE_CROWDED_ROOM')}</span>
+          <span className='cursor_pointer_nover'>{t('TWISTED_METAL')}</span>
         </div>
         <div className='footer_d_flex footer_position'>
           <img src={icon_flickstar} width={161.92} height={44.08} />
-          <p className='footer_para footer_div_span'>{t('FLICKSTAR_ONE_STOP_DESTINATION')}</p>
+          <p className='footer_para footer_div_span cursor_pointer_nover'>{t('FLICKSTAR_ONE_STOP_DESTINATION')}</p>
         </div>
       </div>
       <Divider light />
@@ -70,7 +70,7 @@ const Footer = () => {
           <div><img className='footer_img_width' src={mdi_youtube} width={20} height={14} /></div>
         </div>
         <div className='footer_section3_div1 footer_div1_span'>
-          <span>{t('@_2023_FLICKSTAR_LLC')}</span>
+          <span >{t('@_2023_FLICKSTAR_LLC')}</span>
           <span>{t('SUBSCRIBER_AGREEMENT')}</span>
           <span>{t('PRIVACY_POLICY')}</span>
           <span>{t('PERSONAL_INFORMATION')}</span>

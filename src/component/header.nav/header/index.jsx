@@ -56,7 +56,11 @@ export default function Header({ onOpenNav }) {
   const [showSearch, setShowSearch] = useState("");
   const [show, setShow] = useState("top");
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [query, setQuery] = useState("");
+  const [activeTab, setActiveTab] = useState(1);
+
+  const handleTabClick = (tabNumber) => {
+    setActiveTab(tabNumber);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -166,7 +170,8 @@ export default function Header({ onOpenNav }) {
 
       <StyledToolbar className='header_nav_main '>
 
-        <div className='nav_title cursor_pointer p-l ' onClick={() => navigate('/')} ><img src={icon_flickstar} width={126.27} height={27.86} /></div>
+        <div className={`tab1 ${activeTab === 1 ? 'active' : ''} nav_title cursor_pointer p-l`}
+          onClick={() => { navigate('/'); handleTabClick(1) }} ><img src={icon_flickstar} width={126.27} height={27.86} /></div>
         <Box />
 
         <Stack
@@ -179,19 +184,35 @@ export default function Header({ onOpenNav }) {
         >
           <div className='p-r'>
             <ul className='font_width_height cursor_pointer header_nav_item'>
-              <li onClick={() => navigate('/movies')}>{t('MOVIES')}</li>
-              <li>{t('TV_SHOWS')}</li>
-              <li>{t('WEB_SERIES')}</li>
-              <li onClick={() => navigate('/kids')}>{t('KIDS')}</li>
+              <li className={`tab1 ${activeTab === 2 ? 'active' : ''}`}
+                onClick={() => { navigate('/movies'); handleTabClick(2) }}>{t('MOVIES')}</li>
+
+              <li className={`tab1 ${activeTab === 3 ? 'active' : ''}`}
+                onClick={() => handleTabClick(3)}>{t('TV_SHOWS')}</li>
+
+              <li className={`tab1 ${activeTab === 4 ? 'active' : ''}`}
+                onClick={() => handleTabClick(4)}>{t('WEB_SERIES')}</li>
+
+              <li className={`tab1 ${activeTab === 5 ? 'active' : ''}`}
+                onClick={() => { navigate('/kids'); handleTabClick(5) }}>{t('KIDS')}</li>
+
+
               {login == "true" ?
                 <div className='header_login_div'>
                   <div className='header_lives_main'>
                     <p className='lives_p'>{t('LIVE')}</p>
-                    <span >{t('STREAMING')}</span>
+                    <span className={`tab1 ${activeTab === 6 ? 'active' : ''}`}
+                      onClick={() => handleTabClick(6)} >{t('STREAMING')}</span>
                   </div>
-                  <li className='header_nav_sub'>{t('SUBSCRIBE')}</li>
-                  <div><SearchIcon onClick={openSearch} /></div>
-                  <div><NotificationsNoneIcon /></div>
+                  <li className={`tab1 ${activeTab === 7 ? 'active' : ''} header_nav_sub`}
+                    onClick={() => handleTabClick(7)} >{t('SUBSCRIBE')}</li>
+
+                  <div className={`tab1 ${activeTab === 8 ? 'active' : ''} `}
+                    onClick={() => handleTabClick(8)}><SearchIcon onClick={openSearch} /></div>
+
+                  <div className={`tab1 ${activeTab === 9 ? 'active' : ''}`}
+                    onClick={() => handleTabClick(9)}><NotificationsNoneIcon /></div>
+
                   <div className='header_nav_language'><LanguageIcon />
                     <FormControl fullWidth>
                       <NativeSelect
